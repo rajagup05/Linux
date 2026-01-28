@@ -19,16 +19,16 @@ In Linux, these commands are used to delete files and folders. We should be care
 > **rm -r (Recursive Remove):** Used to delete a directory and everything inside it (files and subdirectories).  eg. `rm -r foldername`
 
 > [!Warning]
-> Combining this with -f (rm -rf) forces the deletion without asking for any confirmation, even for write-protected files. 
+> Combining this with `-f (rm -rf)` forces the deletion without asking for any confirmation, even for write-protected files. 
 
 
 > * (Wildcard/Glob): The asterisk acts as a "wildcard" representing everything in a specific context.
 
 eg. 
-- rm *: Deletes all files in your current directory (but ignores subdirectories).
-- rm -r *: Deletes everything in the current directory, including all folders and their contents.
-- rm *.txt: Deletes only files ending in .txt. 
+- `rm *`: Deletes all files in your current directory (but ignores subdirectories).
+- `rm -r *`: Deletes everything in the current directory, including all folders and their contents.
+- `rm *.txt`: Deletes only files ending in .txt. 
 
 
 
-**Lab:** Use rm *.txt to delete all text files from a folder, then use rmdir to delete the empty folder.
+**Lab:** Use `rm *.txt` to delete all text files from a folder, then use rmdir to delete the empty folder.

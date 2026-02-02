@@ -4,7 +4,14 @@
 
 **Commands:** 
 
-1. chmod (both symbolic u+x and octal 755 methods):
+1. **chmod(both symbolic u+x and octal 755 methods):** The chmod command modifies the access permissions of files and directories for a certain user, group or others.
+
+It supports two primary methods: symbolic and octal.
+
+- Symbolic Method (Using Letters and Symbols):
+
+- Octal Method (Using Numbers):
+
 
 2. chown: 
 

@@ -23,7 +23,7 @@ It supports two primary methods: symbolic and octal.
 
 - **Octal Method (Using Numbers):** The octal method uses a three-digit number to represent the permissions for the owner, group, and others, respectively. Each digit is a sum of numeric values assigned to the permissions: 
 
-Permission 	|    Value \
+**Permission** 	|    **Value** \
 Read (r)	    :    4  \
 Write (w)	     :   2  \
 Execute (x)	   :   1  \

@@ -39,6 +39,11 @@ To determine the octal value for a specific set of permissions, you sum the valu
 
 
 
-2. chown: 
+2. **chown (Change Owner) and chgrp (Change Group):**
+
+- `chown` is used to change the **user owner** and/or the **group owner** of a file or directory.
+- `chgrp` is specifically for changing only the **group owner**. 
+
+
 
 **Lab:** Create script.sh. Use chmod u+x to make it executable. Create another file and set its permissions to 740 (rwx r-- ---).

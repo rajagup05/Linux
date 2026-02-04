@@ -41,8 +41,11 @@ To determine the octal value for a specific set of permissions, you sum the valu
 
 2. **chown (Change Owner) and chgrp (Change Group):**
 
-- `chown` is used to change the **user owner** and/or the **group owner** of a file or directory.
-- `chgrp` is specifically for changing only the **group owner**. 
+- `chown` is used to change the **user owner** and/or the **group owner** of a file or directory. eg. `sudo chown username file.txt`
+- `chgrp` is specifically for changing only the **group owner**.  eg. `sudo chgrp groupname file.txt`
+
+> [!NOTE]
+> The sudo command is typically required to use `chown` or `chgrp` unless you are the root user. 
 
 
 

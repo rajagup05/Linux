@@ -14,6 +14,7 @@
 - Running administrative tools (e.g., `sudo fdisk -l`)
   
 
-3. chown: 
+2. **Changing File/Directory Ownership (`chown`):** The `chown` (change owner) command changes the user and/or group owner of a given file or directory. You typically need administrator privileges (using `sudo`) to use this command unless you are changing the group to one you are a member of and already own the file. 
+
 
 **Lab:** Use `sudo chown root <file>` to change a file's owner to '`root`'. Then, change it back to your username.

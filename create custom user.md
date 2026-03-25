@@ -8,7 +8,7 @@
 - used command `sudo useradd john` to create a user
 - changed directory to `/etc/passwd` and used `cat passwd` to view the newly created user details.
 
-it looks like this: `john:x:1002:1002::/home/john:/bin/bash`
+  output looks like this: `john:x:1002:1002::/home/john:/bin/bash`
 
 2. **Assign a unique UID `1690` and designate the home directory as `/var/www/john`.**
 

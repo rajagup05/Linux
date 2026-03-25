@@ -17,10 +17,10 @@
 - To check this again changed directory to `/etc/passwd` and used `cat passwd` to view the updated user details.
 
 
-**john:x:1690:1002::/home/john:/bin/bash:**
+**john:x:1690:1002::/home/john:/bin/bash** :
 
 - `john` **(Username):** The login name of the user.
-- `x` **(Password Placeholder)**: Indicates that the actual encrypted password is not stored in this file, but rather in the secure /etc/shadow file.
+- `x` **(Password Placeholder)**: Indicates that the actual encrypted password is not stored in this file, but rather in the secure `/etc/shadow` file.
 - `1690` **(User ID - UID)**: The unique numerical ID assigned to the user "john".
 1002 (Group ID - GID): The numerical ID of the user's primary group.
 - `` **(Comment/GECOS)**: This field is empty (between the two colons). It is usually used for user information, such as full name or phone number.

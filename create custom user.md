@@ -15,3 +15,14 @@
 - used command `sudo usermod -u 1690 john` to change uid
 - used command `sudo usermod john -d /var/www/john` to move user's home directory
 - To check this again changed directory to `/etc/passwd` and used `cat passwd` to view the updated user details.
+
+
+**john:x:1690:1002::/home/john:/bin/bash:**
+
+- `john` **(Username):** The login name of the user.
+- `x` **(Password Placeholder)**: Indicates that the actual encrypted password is not stored in this file, but rather in the secure /etc/shadow file.
+- `1690` **(User ID - UID)**: The unique numerical ID assigned to the user "john".
+1002 (Group ID - GID): The numerical ID of the user's primary group.
+- `` **(Comment/GECOS)**: This field is empty (between the two colons). It is usually used for user information, such as full name or phone number.
+- `/home/john` **(Home Directory)**: The path to the user's personal home directory.
+- `/bin/bash` **(Shell)**: The default command interpreter (shell) that runs when the user logs in

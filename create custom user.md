@@ -15,6 +15,8 @@
 - used command `sudo usermod john -d /var/www/john` to move user's home directory
 - To check this again changed directory to `/etc/passwd` and used `cat passwd` to view the updated user details.
 
+  output looks like this: `john:x:1690:1002::/var/www/john:/bin/bash`
+
 
 **john:x:1690:1002::/home/john:/bin/bash** :
 

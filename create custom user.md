@@ -3,8 +3,7 @@
 
 1. **Create a user named `john` on `App server 2` server.**
 
-- checked current host name using command `hostname`.
-- used `sudo hostname [HOSTNAME]` command to change to the desired Host.
+- used `ssh username@server2` to connect to server
 - used command `sudo useradd john` to create a user
 - changed directory to `/etc/passwd` and used `cat passwd` to view the newly created user details.
 

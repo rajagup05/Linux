@@ -5,3 +5,4 @@
 
 - used $ `ssh user2@server2` to login/connect into the server2.
 - used `sudo yum install cpio` to install the `cpio` package
+- used  `find /home/usersdata -type f -user mark | cpio -pdm /media` to locate all the files only which belongs to user mark in path /home/userdata, then used cpio command to copy the output of previous command to /media folder 

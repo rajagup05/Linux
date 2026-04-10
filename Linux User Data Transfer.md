@@ -11,6 +11,6 @@
 - used `cd /media` then `ls -l /media` to check if the required if copied to this location. 
 
 The `cpio` command is highly efficient for large numbers of files and is built to preserve directory paths exactly as they appear in the input. 
--p: Pass-through mode, which copies files from one directory to another.
--d: Automatically creates leading directories where needed.
--m: Preserves file modification times
+- `-p:` Pass-through mode, which copies files from one directory to another.
+- `-d:` Automatically creates leading directories where needed.
+- `-m:` Preserves file modification times

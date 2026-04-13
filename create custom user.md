@@ -23,7 +23,7 @@
 - `john` **(Username):** The login name of the user.
 - `x` **(Password Placeholder)**: Indicates that the actual encrypted password is not stored in this file, but rather in the secure `/etc/shadow` file.
 - `1690` **(User ID - UID)**: The unique numerical ID assigned to the user "john".
-1002 (Group ID - GID): The numerical ID of the user's primary group.
+- `1002` **(Group ID - GID)**: The numerical ID of the user's primary group.
 - `` **(Comment/GECOS)**: This field is empty (between the two colons). It is usually used for user information, such as full name or phone number.
 - `/home/john` **(Home Directory)**: The path to the user's personal home directory.
 - `/bin/bash` **(Shell)**: The default command interpreter (shell) that runs when the user logs in

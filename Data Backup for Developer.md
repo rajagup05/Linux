@@ -5,3 +5,14 @@
 
 a. Create a compressed archive named `ammar.tar.gz` of the `/data/ammar` directory.
 b. Transfer the archive to the `/home` directory on the Jump Host Server.
+
+solution: 
+
+- used
+```
+$ `cd /data/ammar/` 
+thor@jump-host /data/ammar$ `ls` => and got below output:
+```
+```
+nautilus1.txt  nautilus2.txt  nautilus3.txt
+```

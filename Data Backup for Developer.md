@@ -26,3 +26,10 @@ tar: Removing leading `/' from member names
 /data/ammar/nautilus3.txt
 /data/ammar/nautilus1.txt
 ```
+
+- used $ `sudo mv ammar.tar.gz /home` to move this tar file to `/home` location. and used `ls` to see if it exists.
+```
+thor@jump-host ~$ cd /home
+thor@jump-host /home$ ls
+ammar.tar.gz  ansible  thor
+```

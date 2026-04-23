@@ -9,3 +9,8 @@
 ```
 ---------- 1 root root 40 Apr 17 10:26 /tmp/xfusioncorp.sh
 ```
+- used $ `sudo chmod a+rwx /tmp/xfusioncorp.sh` to give execute perms to all (user, group and others)
+- used $ `ls -l /tmp/xfusioncorp.sh` to check if the perms are added:
+```
+-rwxrwxrwx 1 root root 40 Apr 17 10:26 /tmp/xfusioncorp.sh
+```

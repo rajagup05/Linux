@@ -18,3 +18,29 @@ Essential Linux keyboard keys and their primary uses include:
 - `Alt + F4`: Closes the active window.
 - `Super`: Opens the Application Menu or Activities Overview to search for files and software.
 - `Print Screen`: Takes a screenshot of the entire display.
+
+### Essential Terminal Control Keys:
+
+- `Tab`: Auto-completes commands or file names as you type in the terminal.
+- `Ctrl + C`: Force-kills the currently running command or process.
+- `Ctrl + D`: Logs out of your current terminal session or closes the terminal entirely.
+- `Ctrl + Z`: Suspends or pauses a currently running command in the background.
+- `Ctrl + L`: Clears the terminal screen.
+- `Ctrl + R`: Initiates a reverse-search through your previously typed terminal commands.
+
+### Text editing in the Terminal:
+
+- `Ctrl + A`: Moves your cursor to the beginning of the command line.
+- `Ctrl + E`: Moves your cursor to the very end of the line.
+- `Ctrl + U`: Cuts/deletes everything to the left of your cursor.
+- `Ctrl + K`: Cuts/deletes everything to the right of your cursor.
+
+
+
+
+
+
+
+
+
+

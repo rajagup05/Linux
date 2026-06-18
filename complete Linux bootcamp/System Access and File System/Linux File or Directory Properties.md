@@ -31,6 +31,26 @@ Each triplet consists of:
 - `x` (Execute): Run a file as a program, or enter a directory using the cd command.
 - `-`: Permission denied.
 
+**3. Hard link count**
+
+The second column lists how many hard links point to this specific file or directory. For a standard empty directory, this number defaults to 2 because it links to itself (.) and its parent directory (..).
+
+**4. ownership (user and group)**
+
+- **User Owner**: The specific account name that created or controls the file.
+- **Group Owner**: The system group that shares access privileges over the file.
+
+**5. Size and Timestamp**
+
+- **Size**: Displayed by default in bytes. Tip: Run ls -lh to view file sizes in human-readable formats like KB or MB.
+- **Last Modified**: The date and exact time the file contents were last changed.
+
+
+
+
+
+
+
 
 
 

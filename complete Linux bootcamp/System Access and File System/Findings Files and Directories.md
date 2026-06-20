@@ -17,3 +17,33 @@ The basic syntax is: `find [path] [options] [expression]`. If you omit the path,
 
 - **Files only**: `find /etc -type f -name "nginx.conf"`
 - **Directories only**: `find /var -type d -name "www"`
+
+### Find by size
+
+Use + for larger than, - for smaller than, and suffixes like k (KB), M (MB), or G (GB).
+
+- **Large Files**: `find / -type f -size +100M` (Finds files larger than 100 megabytes).
+- **Empty Items**: `find . -type f -empty` (Finds empty files) or `find . -type d -empty` (Finds empty folders).
+
+### Find by time
+
+- **Modified Recently**: `find ~ -type f -mtime -7` (Finds files modified within the last 7 days).
+- **Modified Minutes Ago**: `find /var/log -type f -mmin -30` (Finds files changed in the last 30 minutes).
+
+
+## Locate
+
+The locate utility does not scan the drive dynamically; it reads a background index database, making it incredibly fast.
+
+- **Basic Search**: `locate config.json`
+- **Case-Insensitive**: `locate -i backup.tar`
+
+>[!Note]
+> If you recently created or moved a file, locate might not see it yet. You can manually force-update the index database by running: sudo updatedb.
+
+
+
+
+
+
+

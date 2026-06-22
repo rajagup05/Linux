@@ -24,3 +24,33 @@ Wildcards in Linux (also known as globbing) are special symbols used by the shel
   - Matches one character not in the defined set.
   - Example Pattern: `file[!0-9].txt`
   - Matches: `fileA.txt (but not file1.txt)`
+
+
+### Expanded Syntax & Techniques
+
+#### 1. Range Matches [...] : You can define explicit sets or alphanumeric ranges inside square brackets to tighten your criteria:
+  - `[aeiou]` matches any single lowercase vowel.
+  - `[a-z]` matches any single lowercase letter.
+  - `[A-Z]` matches any single uppercase letter.
+  - `[0-9]` matches any single numeric digit.
+
+#### 2. Brace Expansion {...} : 
+
+Brace expansion is technically not a traditional wildcard because it generates arbitrary strings rather than checking matching files on the disk, but it behaves similarly in everyday usage.
+
+  - `touch file{A,B,C}.txt` creates `fileA.txt`, `fileB.txt`, and `fileC.txt` simultaneously.
+  - `mkdir dir{1..3}` creates directories named `dir1`, `dir2`, and `dir3`.
+
+
+
+
+
+
+
+
+
+
+
+
+
+

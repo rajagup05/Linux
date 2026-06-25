@@ -19,3 +19,17 @@ syntax: `sudo chown [OPTIONS] [USER][:GROUP] filename`
 - Change both the owner and the group: `sudo chown alice:developers report.txt`
 - Change the group only (using chown): `sudo chown :developers report.txt`
 - Change ownership recursively (applies to a directory and all files inside it): `sudo chown -R alice:developers /var/www/html`
+
+### The chgrp Command
+
+The chgrp command is a dedicated utility used strictly for modifying group ownership. It functions identically to the chown :group syntax.
+
+syntax: `chgrp [OPTIONS] GROUP filename`
+
+examples: 
+
+- Change the group ownership of a file: `chgrp developers notes.txt`
+- Change the group ownership recursively: `chgrp -R developers /shared/project_folder`
+- 
+
+

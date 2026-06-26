@@ -12,3 +12,20 @@ Access Control Lists (ACLs) in Linux provide a fine-grained permission mechanism
 - Grant group permissions:`setfacl -m g:groupname:rx filename`
 - Remove a user's entry:`setfacl -x u:username filename`
 - Remove all ACL rules:`setfacl -b filename`
+
+### Managing default ACLs:
+
+Default ACLs can only be applied to directories. Once set, any new file or subdirectory created inside that directory automatically inherits these permissions.
+
+- Set a default ACL:`setfacl -d -m u:username:rx /path/to/dir`
+- Apply recursively to existing files:`setfacl -R -m u:username:rwx /path/to/dir`
+
+### Mask with ACLs:
+
+The mask defines the absolute maximum permissions that any non-owner ACL entry can possess. Even if you explicitly grant a user `rwx` privileges, if the mask is configured to `r--`, that user will only receive read-only effective access.
+
+- Modify the mask:`setfacl -m mask:rw filename`
+
+### How to identify files with ACls:
+
+When you execute an `ls -l` command, files or directories configured with active ACL rules display a plus sign (`+`) right after the traditional permission string (e.g., `-rw-rwxr--+`).

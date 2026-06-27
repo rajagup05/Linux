@@ -24,3 +24,30 @@ EOF
 If you want to clear out everything currently inside a file and replace it with your new text, use the single greater-than operator >.
 
 example: `echo "This replaces all old content" > filename.txt`
+
+### 4. Inserting Text at a Specific Line 
+
+If you need to place text somewhere other than the bottom of the document, the stream editor sed is your best tool.
+
+- Insert at the Beginning (First Line): `sed -i '1i This goes at the very top' filename.txt`
+- Insert at a Specific Line Number (e.g., Line 5): `sed -i '5i Text inserted at line 5' filename.txt`
+
+### 5. Using an Interactive Text Editor
+
+- Nano (Easiest for beginners): Run nano `filename.txt`. Type your text, then press `Ctrl + O` to save and `Ctrl + X` to exit.
+- Vim (Advanced): Run vim `filename.txt`. Press `i` to enter insert mode, type your text, press `Esc`, and type `:wq!` to save and exit.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

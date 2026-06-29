@@ -1,7 +1,7 @@
 
 ## executing multiple commands
 
-To execute multiple commands in Linux on a single line, use a command separator or conditional operator like ;, &&, or ||.
+To execute multiple commands in Linux on a single line, use a command separator or conditional operator like `;`, `&&`, or `||`.
 
 Each operator behaves differently depending on whether the previous command succeeded or failed.
 

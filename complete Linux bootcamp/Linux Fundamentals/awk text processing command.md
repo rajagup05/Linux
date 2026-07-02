@@ -18,3 +18,12 @@ The Linux awk command is a highly versatile, stream-oriented data extraction and
 - `NF`: Number of Fields (the total column count for the current line).
 - `$NF`: Returns the text string of the very last column in the line.
 - `NR`: Number of Records (the absolute line number currently being processed).
+
+### examples
+
+- `awk '{print $1, $3}' data.txt`: Print the first and third columns of a whitespace-delimited file
+- `awk -F, '{print $1, $2}' inventory.csv`: Use the -F flag to parse standard comma-separated values (CSV)
+- `awk '/ERROR/ {print $0}' system.log`: Print all lines that contain the keyword "ERROR" (acts like grep)
+- `awk '$3 > 100 {print $1, $2}' sales.txt`: Print lines where the third column contains a number greater than 100
+- `awk '{print NR, $0}' document.txt`: Prepend the line number to every line of a document
+- `awk '{sum += $1} END {print "Total:", sum}' numbers.txt`: Sum all the values in the first column and print the grand total at the end

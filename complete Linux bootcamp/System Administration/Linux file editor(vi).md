@@ -11,3 +11,32 @@ The vi editor is the default command-line text editor pre-installed on almost al
 
 ### essential commands
 
+- Opening a File: `vi filename.txt`
+- `i`: Switch to Insert Mode to type text before the cursor.
+- `Esc`: Return to Command Mode from any other mode.
+
+**Cursor Navigation (In Command Mode**):
+
+- `h`: Move left.
+- `j`: Move down.
+- `k`: Move up.
+- `l`: Move right.
+- `0 (zero)`: Jump to the start of the current line.
+- `$`: Jump to the end of the current line.
+- `G`: Jump to the last line of the file.
+- `:number`: Jump directly to a specific line number (e.g., :10)
+
+**Editing & Deleting (In Command Mode)**
+
+Key commands for editing text include `x` (delete character), `dd` (delete line), and `p` (paste), along with `u` for undoing actions.
+
+
+
+
+
+
+
+
+
+
+

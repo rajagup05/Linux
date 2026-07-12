@@ -7,3 +7,20 @@ To switch users and use administrative (sudo) access in Linux, use the su or sud
 - Run a command as a specific user: Use the -u flag:`sudo -u <username> <command>`
 - Start an interactive root shell (keep your current environment): Run:`sudo su -`
 - Switch to another user completely (requires their password): Run su followed by the target username:`su <username>`
+
+
+### 1. Execute a Single Administrative Command
+
+Example: `sudo apt update` or `sudo dnf update`.
+
+### 2. Switch Users
+
+Example: `su - john`
+
+### 3. Open an Interactive Root/Admin Shell
+
+`sudo -i` or `sudo su -`
+
+### 4. Grant Sudo Access (Requires Existing Admin Privileges)
+
+On CentOS / RHEL / Fedora: `sudo usermod -aG wheel <username>`

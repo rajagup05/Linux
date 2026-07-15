@@ -20,3 +20,21 @@ Example: `hostname -i` (Displays the network IP address)
 Prints detailed system and kernel information.
 
 Common Flag: `uname -a` (Prints all available system details)
+
+### which 
+
+ Locates the executable file path of a command
+
+ Example: `which python` (Outputs: `/usr/bin/python`)
+
+ ### cal
+
+ Displays a formatted text calendar in the terminal.
+
+ Example: `cal 12 2026` (Shows `December 2026`)
+
+ ### bc
+
+ An arbitrary-precision command-line calculator language.
+
+ Example: `echo "scale=2; 10/3" | bc` (Outputs: `3.33`)

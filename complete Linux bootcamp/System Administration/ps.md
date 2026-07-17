@@ -11,3 +11,10 @@ The ps command (Process Status) in Linux provides a static point-in-time snapsho
 
 - `ps aux`: `a`-> Shows processes for all users. `u`: Displays user-oriented format (includes CPU and memory usage columns). `x`: Lists processes not attached to a terminal (such as system daemons).Best Used For: Checking memory and CPU consumer spikes
 
+### 3. View Every System Process
+
+- `ps -ef`: `-e`: Selects all processes running on the system. `-f`: Generates a full-format listing.
+
+### Search for a Process by Name
+
+`ps aux | grep nginx`

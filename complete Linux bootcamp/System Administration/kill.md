@@ -13,3 +13,14 @@ syntax: `kill [OPTIONS] [SIGNAL] PID`
 ### Step 2: Choose the Correct Signal
 
 - You can change the intensity of the command by specifying custom termination flags. Use `kill -l` to view all available system flags.
+
+examples: 
+
+- Gracefully Stop a Process: `kill 1234`
+- Force-Kill an Unresponsive App: `kill -9 1234`
+- Target Multiple Instances Simultaneously: `kill 1212 1313 1414`
+- Pause and Resume Activity:
+```
+kill -19 1234  # Pauses the process
+kill -18 1234  # Resumes the process
+```

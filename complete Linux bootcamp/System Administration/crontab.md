@@ -24,3 +24,27 @@ The crontab command in Linux is a time-based job scheduler used to create, edit,
 - `,` (Comma) : Separates a list of discrete multiple values (e.g., 1,3,5 in the weekday field means Mon, Wed, Fri).
 - `-` (Hyphen) : Defines an inclusive range of numbers (e.g., 9-17 in the hour field means 9 AM through 5 PM).
 - `/` (Forward Slash) : Specifies step intervals (e.g., */10 in the minute field runs the task exactly every 10 minutes).
+
+### Examples
+
+- Every minute: `* * * * * /home/user/script.sh`
+- Every 15 minutes: `*/15 * * * * /home/user/script.sh`
+- Every day at 3:30 AM: `30 3 * * * /home/user/backup.sh`
+- Every Sunday at midnight: `0 0 * * 0 /home/user/cleanup.sh`
+- Weekday business hours (Every hour, 9 AM - 5 PM, Mon-Fri): `0 9-17 * * 1-5 /home/user/report.sh`
+
+### Time-Saving Shortcuts
+
+Instead of using five distinct time fields, you can alternatively use these built-in system strings:
+
+- `@daily` : Runs a job exactly once a day at midnight (`0 0 * * *`).
+- `@weekly` : Runs a job once a week on Sunday at midnight (`0 0 * * 0`).
+- `@monthly` : Runs a job on the first minute of every single month (`0 0 1 * *`).
+
+
+
+
+
+
+
+

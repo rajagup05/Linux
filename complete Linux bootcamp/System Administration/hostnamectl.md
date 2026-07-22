@@ -1,0 +1,2 @@
+
+## changing system hostname (hostnamectl)

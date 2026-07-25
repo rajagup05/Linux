@@ -9,3 +9,11 @@ An sos report (formerly known as sosreport) is a command-line utility in Linux t
 - Configurations: Critical files located inside `/etc` (e.g., network settings, service configurations).
 - Kernel & Hardware Metrics: Information about the running kernel version, loaded modules, file systems, disk partitioning, and CPU/memory statistics.
 - Network Status: Interfaces, IP routing tables, and firewall configurations.
+
+### How to Install and Generate an SOS Report
+
+- RHEL / CentOS / Rocky Linux / Oracle Linux: `sudo dnf install sos`
+- Ubuntu / Debian: `sudo apt install sosreport`
+
+- Execution (Requires Root Access): `sudo sos report`
+

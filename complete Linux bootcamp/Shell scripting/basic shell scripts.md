@@ -24,3 +24,29 @@ read user_name
 # Display a customized greeting
 echo "Hello, $user_name! Welcome to shell scripting."
 ```
+
+#### 2. Conditional Logic (If/Else)
+
+```
+#!/bin/bash
+echo "Enter a number:"
+read num
+
+# Check if the number is greater than 10
+if [ $num -gt 10 ]; then
+    echo "The number is greater than 10."
+else
+    echo "The number is 10 or less."
+fi
+```
+
+#### 3. Iteration (Loops)
+
+```
+#!/bin/bash
+# Loop through a set range of numbers
+for i in {1..5}
+do
+   echo "Current loop iteration: $i"
+done
+```

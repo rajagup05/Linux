@@ -10,3 +10,17 @@ Shell scripting allows you to automate repetitive tasks in Linux and Unix-like o
 - Write your commands directly beneath the shebang line.
 - Grant execution permissions to the script file by running `chmod +x myscript.sh` in your terminal.
 - Run the script by typing `./myscript.sh` into your terminal window.
+
+### example code templates
+
+#### 1. Hello World (Basic Input/Output)
+
+```
+#!/bin/bash
+# Prompt the user for input
+echo "What is your name?"
+read user_name
+
+# Display a customized greeting
+echo "Hello, $user_name! Welcome to shell scripting."
+```

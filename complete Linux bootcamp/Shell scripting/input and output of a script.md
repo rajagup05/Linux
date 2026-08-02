@@ -14,4 +14,18 @@ echo "Enter your name:"
 read user_name
 echo "Hello, $user_name!"
 ```
-- 
+- Command-Line Arguments: You can pass data directly into a script when you invoke it using positional variables. `$1`, `$2`, `$3`... represent the first, second, and third arguments. `$@` represents all arguments combined.
+```
+#!/bin/bash
+# Run this as: ./script.sh Alice Bob
+echo "First user is: $1"  # Outputs: Alice
+echo "Second user is: $2" # Outputs: Bob
+```
+- Input Redirection (<): You can force a script or a command inside it to read its stdin from a file instead of the keyboard:
+```
+# Feeds the text inside names.txt directly into the script
+./script.sh < names.txt
+```
+
+### 2. Output in a Script
+

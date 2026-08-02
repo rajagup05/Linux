@@ -29,3 +29,23 @@ echo "Second user is: $2" # Outputs: Bob
 
 ### 2. Output in a Script
 
+Scripts output information using commands like echo or printf. By default, both success messages and errors print to your terminal window.
+
+- Normal Output (stdout):
+```
+echo "This is a normal success message." 
+```
+- Error Output (stderr): To explicitly throw an error, you must redirect your output to file descriptor 2 (>&2)
+```
+echo "Error: Something went wrong!" >&2
+```
+
+### 3. Output Redirection and Pipes
+
+Once a script generates output, the Linux shell allows you to redirect or channel that data elsewhere.
+
+- Overwrite File (>): Sends stdout to a file, overwriting its existing contents.
+```
+./script.sh > output.txt
+```
+- 

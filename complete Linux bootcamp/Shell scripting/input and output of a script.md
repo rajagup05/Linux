@@ -48,4 +48,19 @@ Once a script generates output, the Linux shell allows you to redirect or channe
 ```
 ./script.sh > output.txt
 ```
-- 
+- Append to File (>>): Appends stdout to the end of an existing file.
+```
+./script.sh >> log.txt
+```
+- Redirect Errors Only (2>): Captures only the stderr messages into a file.
+```
+./script.sh 2> error_logs.txt
+```
+- Silence All Outputs (>/dev/null 2>&1): Completely discards both normal output and error logs by sending them to a virtual "black hole".
+```
+./script.sh > /dev/null 2>&1
+```
+- The Pipe Operator (|): Passes the stdout of your script directly as the stdin for another command.
+```
+./script.sh | grep "Critical"
+```

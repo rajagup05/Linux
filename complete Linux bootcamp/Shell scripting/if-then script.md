@@ -35,3 +35,32 @@ When comparing integers, Linux uses structural flags rather than standard symbol
 - `-ne` (Not equal to)
 - `-gt` (Greater than)
 - `-lt` (Less than)
+
+```
+#!/bin/bash
+SCORE=85
+
+if [ "$SCORE" -ge 70 ]; then
+    echo "You passed!"
+else
+    echo "You failed."
+fi
+```
+
+#### 3. String Comparisons (Multiple Conditions with Elif)
+
+For comparing text strings, you can use = and != flags. Adding elif lets you evaluate multiple branches sequentially.
+
+```
+#!/bin/bash
+USER_ROLE="admin"
+
+if [ "$USER_ROLE" = "admin" ]; then
+    echo "Full access granted."
+elif [ "$USER_ROLE" = "editor" ]; then
+    echo "Limited access granted."
+else
+    echo "Access denied."
+fi
+```
+

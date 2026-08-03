@@ -15,3 +15,23 @@ fi
 
 ### examples
 
+#### 1. Checking If a File Exists
+
+This script evaluates if a specific file exists on the system before trying to interact with it.
+
+```
+#!/bin/bash
+
+if [ -f "/etc/passwd" ]; then
+    echo "The file exists."
+fi
+```
+
+#### 2. Number Comparisons (If-Then-Else)
+
+When comparing integers, Linux uses structural flags rather than standard symbols like < or >.
+
+- `-eq` (Equal to)
+- `-ne` (Not equal to)
+- `-gt` (Greater than)
+- `-lt` (Less than)

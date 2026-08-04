@@ -20,3 +20,23 @@ Alternatively, you can write a for loop as a single-line command directly in you
 ```
 for variable in list; do command1; command2; done
 ```
+
+### examples: 
+
+- Loop Through a List: Loops through explicit items like strings, numbers, or variable arrays.
+
+```
+for item in apple banana cherry
+do
+    echo "Fruit: $item"
+done
+```
+
+- Loop Through a Number Range: Uses brace expansion {`start..end..step`} to generate a sequence.
+
+```
+for i in {1..5}
+do
+    echo "Number: $i"
+done
+```

@@ -45,3 +45,22 @@ while true; do
     fi
 done
 ```
+
+A classic use case for a do-while loop is prompting a user for input and forcing the prompt to appear at least once.
+
+```
+#!/bin/bash
+
+while true; do
+    # Prompt the user
+    read -p "Enter a number greater than 10: " num
+
+    # Validate the condition at the end
+    if [ "$num" -gt 10 ]; then
+        echo "Thank you! You entered $num."
+        break  # Exit the loop since condition is satisfied
+    else
+        echo "Invalid input. Try again."
+    fi
+done
+```

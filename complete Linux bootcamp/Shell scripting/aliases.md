@@ -10,3 +10,12 @@ In Linux, an alias acts as a custom shortcut or nickname for a command. You use 
 - Remove an alias: Type `unalias name` (e.g., `unalias ll`) to delete the shortcut.
 
 ### Making Aliases Permanent
+
+- User profile: Open your shell configuration file (like `~/.bashrc` or `~/.zshrc`) in a text editor.
+- Add entry: Insert your alias line at the bottom of the file (e.g., `alias c="clear"`).
+- Reload configuration: Run `source ~/.bashrc` to apply the changes to your current terminal session.
+- System-wide setup: Add aliases to `/etc/bash.bashrc` using root permissions if you want all users on the machine to access them.
+
+- No dynamic arguments: Standard aliases cannot accept positional parameters (like `alias mycp="cp $1 destination"`). For arguments, write a Bash Functions instead.
+- Overriding safety: Use aliases to add safety prompts to destructive commands, such as `alias rm="rm -i"`.
+- Bypassing an alias: Prefix your command with a backslash (e.g., `\rm file.txt`) to run the original system command instead of the alias.

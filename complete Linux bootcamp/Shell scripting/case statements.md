@@ -27,9 +27,25 @@ esac
 - `*)`: Acts as the wildcard/default case if no previous patterns match.
 - `esac`: Closes the entire conditional block.
 
-### examples
+### example
 
-#### 1. Simple Pattern Matching
+```
+#!/bin/bash
+echo "Enter a fruit (apple, banana, or orange):"
+read fruit
 
-This script checks user input and executes a specific block based on the exact word provided.
-
+case $fruit in
+    "apple")
+        echo "Apples are red or green."
+        ;;
+    "banana"|"plantain")
+        echo "Bananas are yellow."
+        ;;
+    "orange")
+        echo "Oranges are orange."
+        ;;
+    *)
+        echo "Unknown fruit."
+        ;;
+esac
+```

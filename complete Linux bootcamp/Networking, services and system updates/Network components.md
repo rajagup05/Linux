@@ -9,3 +9,23 @@ The ip command (part of the iproute2 suite) is the standard Linux utility used t
 - `ip addr add 192.168.1.50/24 dev eth0`: Assigns a static IP address to a specific network interface.
 - `ip link set eth0 up`: Enables a network interface (change up to down to disable it).
 - `ip route add default via 192.168.1.1`: Configures the default gateway route for internet traffic.
+
+### 2. subnet mask
+
+A subnet mask hides (masks) parts of an IP address to divide it into two parts: the network address and the host address. It tells computers which other devices are on the same local network and which ones require a router to reach.
+
+#### How It Works (The Analogy)
+
+Think of an IP address like a phone number: `(555) 019-2834`
+
+- The area code `(555)` is the network. It routes the call to the right town.
+- The remaining digits `019-2834` represent the specific host (the phone in a house).
+
+The subnet mask acts as a blueprint that tells the system exactly where the area code ends and the unique phone number begins.
+
+#### The Binary Mechanism
+
+Computers read IP addresses and subnet masks in binary (1s and 0s).
+
+- **1s** in the subnet mask represent the **Network**. These bits are locked.
+- **0s** in the subnet mask represent the **Host**. These bits can change to assign numbers to devices.

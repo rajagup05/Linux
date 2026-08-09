@@ -38,3 +38,17 @@ how a standard `255.255.255.0` mask splits the IP address `192.168.1.50`:
     Subnet Mask    255.255.255.0    11111111.11111111.11111111.00000000    Network Filter
     Network Portion    192.168.1.X    11000000.10101000.00000001.00000000    The "Street Name"
     Host Portion    X.X.X.50    00000000.00000000.00000000.00110010    The "House Number"
+
+#### CIDR Notation (The Shorthand)
+
+Writing out `255.255.255.0` is tedious. Instead, network administrators use CIDR (Classless Inter-Domain Routing) notation, which simply counts the number of `1` bits in the mask.
+
+- Because `255.255.255.0` has twenty-four 1 bits, it is written as `/24`.
+- `192.168.1.50` with a mask of `255.255.255.0`
+
+#### The Two Reserved Addresses
+
+In any subnet, you cannot use the very first or the very last IP address for a device:
+
+- Network ID (First IP): Identifies the network itself (e.g., `192.168.1.0`).
+- Broadcast Address (Last IP): Used to send data to all hosts simultaneously (e.g., `192.168.1.255`).

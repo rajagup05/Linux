@@ -29,3 +29,12 @@ Computers read IP addresses and subnet masks in binary (1s and 0s).
 
 - **1s** in the subnet mask represent the **Network**. These bits are locked.
 - **0s** in the subnet mask represent the **Host**. These bits can change to assign numbers to devices.
+
+how a standard `255.255.255.0` mask splits the IP address `192.168.1.50`:
+
+    Component    Dotted Decimal    Binary Equivalent    Purpose
+    
+    IP Address    192.168.1.50    11000000.10101000.00000001.00110010    Device Identity
+    Subnet Mask    255.255.255.0    11111111.11111111.11111111.00000000    Network Filter
+    Network Portion    192.168.1.X    11000000.10101000.00000001.00000000    The "Street Name"
+    Host Portion    X.X.X.50    00000000.00000000.00000000.00110010    The "House Number"

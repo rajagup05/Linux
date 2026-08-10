@@ -52,3 +52,22 @@ In any subnet, you cannot use the very first or the very last IP address for a d
 
 - Network ID (First IP): Identifies the network itself (e.g., `192.168.1.0`).
 - Broadcast Address (Last IP): Used to send data to all hosts simultaneously (e.g., `192.168.1.255`).
+
+
+### Gateway
+
+A gateway (specifically a default gateway) is a network node that connects two different networks using different protocols or address ranges. It acts as an exit point for data packets bound for destinations outside the local subnet, routing local network traffic to the broader internet.
+
+#### How It Works (The Analogy)
+
+Think of your local network as an office building and a gateway as the exit door.
+
+- If you want to talk to a coworker in the same building (local network), you walk directly to their desk.
+- If you want to mail a letter to someone in another city (external network/internet), you must take it to the front exit door (gateway) so it can be sent out into the world.
+
+Without a gateway configured, your computer can talk to other local devices but cannot access websites, servers, or any external internet resources.
+
+#### How a Linux System Processes the Gateway
+
+When you request a website (e.g., an external IP like 93.184.215.14), the Linux kernel performs a calculation using its routing table:
+

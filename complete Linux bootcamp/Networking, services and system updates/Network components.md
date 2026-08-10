@@ -71,3 +71,12 @@ Without a gateway configured, your computer can talk to other local devices but 
 
 When you request a website (e.g., an external IP like 93.184.215.14), the Linux kernel performs a calculation using its routing table:
 
+- Local Check: It checks if the destination IP is inside your subnet mask.
+- The Exit Plan: Since the destination is external, the kernel sends the packet directly to the MAC address of the Default Gateway (usually your router's IP, like 192.168.1.1).
+- The Hand-off: The router receives the packet and passes it along to your Internet Service Provider (ISP).
+
+#### Managing Gateways in Linux via CLI
+
+- View your gateway: `ip route show` (Output example: default via 192.168.1.1 dev eth0 proto dhcp src 192.168.1.50 (This shows 192.168.1.1 is your gateway))
+- Add a default gateway manually: `sudo ip route add default via 192.168.1.1 dev eth0`
+- Delete a default gateway: `sudo ip route del default via 192.168.1.1 dev eth0`

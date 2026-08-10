@@ -54,7 +54,7 @@ In any subnet, you cannot use the very first or the very last IP address for a d
 - Broadcast Address (Last IP): Used to send data to all hosts simultaneously (e.g., `192.168.1.255`).
 
 
-### Gateway
+### 3. Gateway
 
 A gateway (specifically a default gateway) is a network node that connects two different networks using different protocols or address ranges. It acts as an exit point for data packets bound for destinations outside the local subnet, routing local network traffic to the broader internet.
 

@@ -91,3 +91,17 @@ The core difference between a Static and a DHCP IP address comes down to who ass
         Persistence        Permanent (never changes unless edited)       Temporary (changes when the "lease" expires)
         Risk of Conflict   High (if you typo an address already in use)  None (the server tracks who has what)
         Best Used For      Servers, printers, NAS, gateways              Laptops, phones, desktop workstations
+
+#### Static IP (Manual)
+
+A static IP is configured locally on the device. It bypasses the router's automatic allocation entirely.
+
+- The Benefit: The address is completely predictable. If your file server is at 192.168.1.10, it will stay at 192.168.1.10
+- The Downside: High administrative overhead. If you move your laptop to a coffee shop network, your manually typed static IP will cause a total loss of internet connection until you change it back.
+
+#### DHCP IP (Dynamic Host Configuration Protocol)
+
+DHCP is a network protocol that automates IP configuration. When a device boots up, it broadcasts a request ("Is there a DHCP server here?"). The server (usually your router) leases it an IP, subnet mask, and gateway.
+
+- The Benefit: Total plug-and-play simplicity. You can move between home, work, and public Wi-Fi networks without ever touching your network settings.
+- The Downside: The IP can change. If you host a local website or gaming server, your friends might lose access tomorrow if your router assigns your computer a different address.

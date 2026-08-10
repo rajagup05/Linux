@@ -80,3 +80,14 @@ When you request a website (e.g., an external IP like 93.184.215.14), the Linux 
 - View your gateway: `ip route show` (Output example: default via 192.168.1.1 dev eth0 proto dhcp src 192.168.1.50 (This shows 192.168.1.1 is your gateway))
 - Add a default gateway manually: `sudo ip route add default via 192.168.1.1 dev eth0`
 - Delete a default gateway: `sudo ip route del default via 192.168.1.1 dev eth0`
+
+### 4. static and DHCP ip
+
+The core difference between a Static and a DHCP IP address comes down to who assigns the address and how long it stays the same
+
+        Feature    Static IP    DHCP IP    
+        
+        Assignment         Manually typed by an administrator            Assigned automatically by a server/router
+        Persistence        Permanent (never changes unless edited)       Temporary (changes when the "lease" expires)
+        Risk of Conflict   High (if you typo an address already in use)  None (the server tracks who has what)
+        Best Used For      Servers, printers, NAS, gateways              Laptops, phones, desktop workstations

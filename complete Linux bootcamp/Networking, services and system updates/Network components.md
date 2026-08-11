@@ -108,7 +108,7 @@ DHCP is a network protocol that automates IP configuration. When a device boots 
 
 
 
-### INTERFACE
+### 5. INTERFACE
 
 In Linux, a network interface is the software boundary between the operating system kernel and a network. It acts as the gateway that allows the system to send and receive data packets, whether using physical hardware or entirely virtual connections.
 

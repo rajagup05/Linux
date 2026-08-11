@@ -105,3 +105,17 @@ DHCP is a network protocol that automates IP configuration. When a device boots 
 
 - The Benefit: Total plug-and-play simplicity. You can move between home, work, and public Wi-Fi networks without ever touching your network settings.
 - The Downside: The IP can change. If you host a local website or gaming server, your friends might lose access tomorrow if your router assigns your computer a different address.
+
+
+
+### INTERFACE
+
+In Linux, a network interface is the software boundary between the operating system kernel and a network. It acts as the gateway that allows the system to send and receive data packets, whether using physical hardware or entirely virtual connections.
+
+#### How Interfaces Work
+
+Unlike devices like disks, network interfaces do not appear as files in the /dev directory. Instead, the kernel assigns them unique names (like eth0 or wlan0) and manages them via standard system configuration tools. Every interface must have a layer 2 hardware address (MAC address) and usually a layer 3 protocol configuration (IPv4 or IPv6 address) to process network traffic.
+
+#### Types of Interfaces
+
+- Physical Interfaces: Hardware cards like Ethernet (`eth0`, `enp3s0`) or Wi-Fi (`wlan0`) that connect to actual cables or wireless signals.

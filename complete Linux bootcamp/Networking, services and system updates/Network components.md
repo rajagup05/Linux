@@ -119,3 +119,19 @@ Unlike devices like disks, network interfaces do not appear as files in the /dev
 #### Types of Interfaces
 
 - Physical Interfaces: Hardware cards like Ethernet (`eth0`, `enp3s0`) or Wi-Fi (`wlan0`) that connect to actual cables or wireless signals.
+- Loopback Interface (lo): A special, purely virtual interface used by the system to talk to itself. It always uses the IP address `127.0.0.1`.
+- Virtual Interfaces: Software-created interfaces with no dedicated physical hardware, such as:
+  - Bridges (br0): Virtual switches that link multiple interfaces together.
+  - VETH Pairs: Virtual Ethernet cables used to connect isolated container environments.
+
+#### Checking Interface Status
+
+You can view and manage interfaces using the modern ip tool from the iproute2 package:
+
+```
+# View all active and inactive interfaces on the system
+ip link show
+
+# View detailed IP address assignments for each interface
+ip address show
+```

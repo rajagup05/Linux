@@ -135,3 +135,14 @@ ip link show
 # View detailed IP address assignments for each interface
 ip address show
 ```
+
+### 6. INTERFACE MAC
+
+In Linux, an interface MAC (Media Access Control) address is a unique 48-bit (6-byte) physical hardware identifier assigned to a network interface card (NIC). While IP addresses route data across different networks, MAC addresses deliver data packets between devices on the same local network segment (Layer 2 of the OSI model).
+
+#### How MAC Addresses Work in Linux
+
+- Hardware vs. Software: The physical MAC address is burned into the NIC by the manufacturer (the Burned-In Address or BIA). However, during boot, the Linux kernel reads this value into system memory, allowing users to temporarily override or "spoof" it using software commands.
+- Format: It is written as six groups of two hexadecimal digits separated by colons (e.g., `00:1a:2b:3c:4d:5e`).
+- The First 3 Bytes: Known as the OUI (Organizationally Unique Identifier), these identify the manufacturer of the network card (e.g., Intel, Realtek).
+- The Last 3 Bytes: A unique serial number assigned by the manufacturer to that specific device.

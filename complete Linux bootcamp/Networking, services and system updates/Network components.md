@@ -146,3 +146,38 @@ In Linux, an interface MAC (Media Access Control) address is a unique 48-bit (6-
 - Format: It is written as six groups of two hexadecimal digits separated by colons (e.g., `00:1a:2b:3c:4d:5e`).
 - The First 3 Bytes: Known as the OUI (Organizationally Unique Identifier), these identify the manufacturer of the network card (e.g., Intel, Realtek).
 - The Last 3 Bytes: A unique serial number assigned by the manufacturer to that specific device.
+
+#### Finding a MAC Address in Linux
+
+You can find the MAC address of any interface using the ip tool. Look for the term link/ether in the output:
+
+```
+# Show MAC addresses for all network interfaces
+ip link show
+
+# Example output for an Ethernet interface (enp3s0)
+2: enp3s0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP mode DEFAULT group default qlen 1000
+    link/ether 52:54:00:12:34:56 brd ff:ff:ff:ff:ff:ff
+```
+
+In this example, `52:54:00:12:34:56` is the interface's current MAC address.
+
+#### How to Temporarily Change a MAC Address
+
+Linux allows you to change an interface's MAC address for privacy, network testing, or bypassing MAC-based router filters. This reset returns to default upon reboot.
+
+```
+# 1. Bring the interface down
+sudo ip link set dev eth0 down
+
+# 2. Change the MAC address
+sudo ip link set dev eth0 address 00:11:22:33:44:55
+
+# 3. Bring the interface back up
+sudo ip link set dev eth0 up
+```
+
+#### MAC Addresses on Virtual Interfaces
+
+Virtual interfaces (like bridges, bonds, or veth pairs used in Docker containers) also require MAC addresses to communicate. The Linux kernel generates these virtual MAC addresses automatically using a randomized or sequential pool to prevent local network conflicts.
+

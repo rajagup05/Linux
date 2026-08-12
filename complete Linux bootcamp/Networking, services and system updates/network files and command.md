@@ -32,3 +32,19 @@ When you run ping, your computer sends a small packet of data called an ICMP (In
 
 >[!Note]
 >On Linux, ping will run indefinitely until you stop it manually by pressing Ctrl + C.
+
+#### How to Read the Output
+
+When you run a successful ping, you will see lines of output that look like this:
+```
+64 bytes from 142.250.190.46: icmp_seq=1 ttl=117 time=14.2 ms
+```
+
+- `64 bytes`: The size of the network packet sent.
+- `from 142.250.190.46`: The IP address of the device responding.
+- `icmp_seq=1`: The sequence number of the packet (helps identify if packets are arriving out of order or getting lost).
+- `ttl=117`: Time to Live. The maximum number of network hops (routers) the packet can pass through before being dropped.
+- `time=14.2 ms`: Latency (Ping rate). The exact time it took (in milliseconds) for the packet to go to the server and back. Lower numbers mean a faster connection.
+
+#### Useful Flags (Options)
+

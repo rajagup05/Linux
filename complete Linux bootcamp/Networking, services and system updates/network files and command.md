@@ -48,3 +48,12 @@ When you run a successful ping, you will see lines of output that look like this
 
 #### Useful Flags (Options)
 
+- `ping -c 4 google.com` - Stops automatically after sending exactly 4 packets (mimics Windows behavior).
+- `ping -i 5 google.com` - Changes the wait interval to send a packet every 5 seconds instead of the default 1 second.
+- `ping -s 1000 google.com` - Changes the packet payload size to 1000 bytes to test how the network handles larger data chunks.
+- `ping -4 google.com` - Forces the command to use IPv4 addresses only.
+
+#### Common Error Messages
+
+- **Destination Host Unreachable**: Your computer cannot find a path/route to the target IP address (often a local network or router issue).
+- **Request Timed Out / 100% packet loss**: The packet was sent, but no response came back. This happens if the target is turned off, the IP does not exist, or a firewall is intentionally blocking ping requests for security.

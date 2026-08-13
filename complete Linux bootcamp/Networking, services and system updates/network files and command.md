@@ -119,4 +119,15 @@ It acts like a network security monitor, showing you exactly which apps are talk
 
 #### Common Usage and Examples
 
+- View all active connections (TCP and UDP): `netstat -a`
+- Show connections as numbers (faster, skips DNS lookup): `netstat -an`
+- Find out which program/PID is using a port (requires sudo): `sudo netstat -pntle` (A popular combination: -p for program name, -n for numerical addresses, -t for TCP, -l for listening ports).
+- View the network routing table: `netstat -r`
 
+#### Modern Alternative: netstat vs. ss
+
+Just like ifconfig, netstat is an older tool that has been deprecated in modern Linux distributions. It is part of the legacy net-tools package and has been replaced by the much faster and more accurate ss (socket statistics) command.
+
+- List all listening TCP ports: `netstat -tl` => `ss -tl`
+- Show active connections with PID: `sudo netstat -tup` => `sudo ss -tup`
+- View summary statistics: `netstat -s` => `ss -s`

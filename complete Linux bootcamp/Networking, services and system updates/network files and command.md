@@ -105,4 +105,18 @@ Instead of manually configuring IP addresses and routes, these commands look at 
 - Restart a network card (useful if your connection drops): `sudo ifdown eth0 && sudo ifup eth0`
 - Bring up a Wi-Fi connection: `sudo ifup wlan0`
 
+### 4. netstat
+
+`netstat` (network statistics) is a classic command-line utility used to monitor and troubleshoot network connections, routing tables, and interface statistics on a Linux system.
+
+It acts like a network security monitor, showing you exactly which apps are talking to the internet, which ports are open, and where your traffic is going.
+
+#### What Can You Do With It?
+
+- Find open ports: See what services (like web servers or SSH) are waiting for connections.
+- Identify active connections: Check who is currently connected to your server.
+- Troubleshoot apps: Figure out why a process or app cannot bind to a specific network port.
+
+#### Common Usage and Examples
+
 

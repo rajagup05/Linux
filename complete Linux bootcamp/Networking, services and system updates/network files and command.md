@@ -76,4 +76,15 @@ While it is heavily used in older systems and legacy tutorials, it has been depr
 
 - View all active interfaces: `ifconfig`
 - View all interfaces (including disabled ones): `ifconfig -a`
+- Disable a network interface: `sudo ifconfig eth0 down`
+- Enable a network interface: `sudo ifconfig eth0 up`
+- Assign a static IP address and netmask: `sudo ifconfig eth0 192.168.1.50 netmask 255.255.255.0`
 
+#### Modern Alternative: `ifconfig` vs. `ip`
+
+Most modern Linux distributions (like Ubuntu 18.04+, RHEL 7+, Debian 10+) no longer include ifconfig by default. If you type it, you may get a "command not found" error.
+
+- View all interfaces: `ifconfig -a` => `ip a` (or `ip address`)
+- Enable an interface: `ifconfig eth0 up` => `ip link set eth0 up`
+- Disable an interface: `ifconfig eth0 down` => `ip link set eth0 down`
+- Assign an IP address: `ifconfig eth0 192.168.1.50` => `ip addr add 192.168.1.50/24 dev eth0`

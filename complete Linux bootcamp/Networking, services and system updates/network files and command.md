@@ -57,3 +57,23 @@ When you run a successful ping, you will see lines of output that look like this
 
 - **Destination Host Unreachable**: Your computer cannot find a path/route to the target IP address (often a local network or router issue).
 - **Request Timed Out / 100% packet loss**: The packet was sent, but no response came back. This happens if the target is turned off, the IP does not exist, or a firewall is intentionally blocking ping requests for security.
+
+
+### 2. ifconfig
+
+`ifconfig` (interface configuration) is a classic command-line tool in Linux used to view, configure, and manage network interfaces.
+
+While it is heavily used in older systems and legacy tutorials, it has been deprecated in modern Linux distributions in favor of the more powerful ip command.
+
+#### What it Does
+
+- Displays active interfaces: Shows names, IP addresses, MAC addresses, and traffic stats.
+- Configures IP addresses: Assigns static IPs or subnet masks to specific network cards.
+- Enables/Disables network cards: Turns interfaces up (on) or down (off).
+
+
+#### Common Usage and Examples
+
+- View all active interfaces: `ifconfig`
+- View all interfaces (including disabled ones): `ifconfig -a`
+

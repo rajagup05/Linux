@@ -145,3 +145,18 @@ Just like ifconfig, netstat is an older tool that has been deprecated in modern 
 
 The standard structure of a tcpdump command is: `tcpdump [options] [filters]`
 
+#### Commands
+
+- `tcpdump -i eth0`: Captures traffic on a specific interface (e.g., eth0).
+- `tcpdump -c 10`: Stops automatically after capturing exactly 10 packets.
+- `tcpdump -n`: Shows numerical IP addresses and port numbers instead of resolving hostnames.
+- `tcpdump -X`: Displays packet content in both Hex and ASCII formats.
+- `tcpdump -w output.pcap`: Saves the captured network traffic directly to a file.
+- `tcpdump -r output.pcap`: Reads and displays packets from a saved file.
+
+#### Filtering Examples
+
+- `tcpdump host 192.168.1.50`: Captures traffic to or from a specific IP address.
+- `tcpdump port 80`: Monitors traffic on a specific port (like HTTP).
+- `tcpdump src 10.0.0.5 and dst port 443`: Filters by source IP and destination port.
+- `tcpdump icmp`: Isolates only ping (ICMP) traffic.

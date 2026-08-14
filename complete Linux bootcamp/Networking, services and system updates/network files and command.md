@@ -131,3 +131,17 @@ Just like ifconfig, netstat is an older tool that has been deprecated in modern 
 - List all listening TCP ports: `netstat -tl` => `ss -tl`
 - Show active connections with PID: `sudo netstat -tup` => `sudo ss -tup`
 - View summary statistics: `netstat -s` => `ss -s`
+
+
+### 5. tcpdump
+
+`tcpdump` is a powerful command-line packet analyzer for Linux. It captures and displays network traffic passing through your system in real time, making it essential for security analysis and troubleshooting.
+
+- Intercepts traffic: It hooks into your network interface to read raw packets.
+- Applies filters: It allows you to isolate specific traffic by IP, port, or protocol.
+- Saves captures: It exports data into `.pcap` files for analysis in tools like Wireshark.
+
+#### syntax
+
+The standard structure of a tcpdump command is: `tcpdump [options] [filters]`
+

@@ -44,3 +44,10 @@ ClientAliveCountMax 0
 # Limit remote shell access to explicitly named users.
 AllowUsers your_username
 ```
+
+### Validate and Restart the Service
+
+Never restart the service blindly. A single syntax error can crash the daemon and drop your remote administrative capabilities.
+
+- Test the configuration syntax for unexpected errors: `sudo sshd -t`
+- If the terminal returns no output, it is safe to reload the daemon: `sudo systemctl restart sshd`

@@ -24,3 +24,12 @@ ss -au      # All UDP connections
 ```
 
 - Filter by Active Network State: `ss -t state established`
+- Filter by Specific Port:
+
+```
+ss -ltn sport = :22      # Checks if something is listening locally on port 22 (SSH)
+ss -tn dport = :443      # Checks outbound connections going to a remote HTTPS port
+```
+
+- View Quick Network Statistics Summary: `ss -s`
+  

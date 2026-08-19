@@ -9,3 +9,18 @@ The ss command (Socket Statistics) is a powerful Linux command-line utility used
 - `-l`: Shows only listening sockets (which are waiting for incoming connections).
 - `-t`: Filters for TCP connections.
 - `-u`: Filters for UDP connections.
+- `-n`: Shows raw numerical port numbers and IP addresses instead of resolving them into names (e.g., 22 instead of ssh).
+- `-p`: Lists the process name and Process ID (PID) utilizing the socket.
+- `-s`: Prints a summary overview of overall network statistics.
+
+### 💻 Examples
+
+- To see all listening ports, their corresponding numeric port numbers, and the specific programs running them, run: `sudo ss -tulpn`
+- View All TCP or UDP Connections
+
+```
+ss -at      # All TCP connections (listening and established)
+ss -au      # All UDP connections
+```
+
+- Filter by Active Network State: `ss -t state established`

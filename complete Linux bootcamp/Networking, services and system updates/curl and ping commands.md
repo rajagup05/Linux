@@ -20,4 +20,7 @@ The curl command stands for "Client URL." It is an incredibly powerful tool for 
 
 #### Examples: 
 
-
+- Fetch full page content and display it directly in the terminal: `curl https://example.com`
+- Fetch HTTP headers only to see if a web server configuration or status code (like 200 OK) is working without downloading the page body: `curl -I https://example.com`
+- Download and save a file using its original remote filename: `curl -O https://example.com/file.tar.gz`
+- Send a POST request with JSON data to test an API endpoint: `curl -X POST -H "Content-Type: application/json" -d '{"name": "Alice"}' https://example.com`

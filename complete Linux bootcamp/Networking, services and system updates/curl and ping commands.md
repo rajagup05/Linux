@@ -10,3 +10,14 @@ The ping command is the first diagnostic step to check if a remote server is ali
 #### Examples:
 
 - Test basic connectivity to a domain or IP address: `ping google.com`
+- Limit the packet count so the command stops automatically (e.g., after 4 pings): `ping -c 4 google.com`
+- Change the interval between sending packets to speed up the test (e.g., every 0.2 seconds): `ping -i 0.2 google.com`
+- Test IPv6 connectivity specifically: `ping6 google.com`
+
+### The `curl` Command
+
+The curl command stands for "Client URL." It is an incredibly powerful tool for transferring data, downloading files, and debugging web services.
+
+#### Examples: 
+
+

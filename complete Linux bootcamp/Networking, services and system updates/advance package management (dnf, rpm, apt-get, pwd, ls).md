@@ -51,3 +51,27 @@ rpm -qpi package.rpm  # Show metadata, author, and description of the file
 sudo rm -f /var/lib/rpm/__db*  # Remove stale lock files
 sudo rpm --rebuilddb           # Rebuild the package index database
 ```
+
+### 🌍 3. Advanced APT-GET (Debian/Ubuntu Ecosystem)
+
+apt-get and apt manage .deb packages via automated dependency resolution.
+
+- Fixing Broken Dependencies: Force the system to resolve missing or broken dependencies automatically.
+
+```
+sudo apt-get install -f  # "Fix broken" flag repair script
+```
+
+- Intelligent Upgrades: Upgrade the entire system, handling changing dependencies and removing obsolete packages safely.
+
+```
+sudo apt-get dist-upgrade  # Aggressively handles architecture changes and dependencies
+```
+
+- System Cleanup: Purge configuration files alongside the binary applications to keep the system clean.
+
+```
+sudo apt-get purge nginx      # Deletes the application AND its config files
+sudo apt-get autoremove --purge  # Cleans up orphaned dependencies and their configs
+```
+

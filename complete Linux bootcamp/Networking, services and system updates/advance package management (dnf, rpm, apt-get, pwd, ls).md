@@ -28,3 +28,26 @@ dnf module list nodejs       # Check available streams
 dnf module enable nodejs:20  # Switch to stream 20
 ```
 
+### 🛠️ 2. Advanced RPM (Low-Level Red Hat Tool)
+
+rpm interacts directly with individual .rpm files and the local database without checking remote networks.
+
+- Package Verification: Check if critical system files have been modified, deleted, or corrupted since installation.
+
+```
+rpm -Va  # Verify all installed packages (outputs changes to sizes, MD5, permissions)
+```
+
+- Querying Uninstalled Files: Inspect a downloaded .rpm package before installing it onto the system.
+
+```
+rpm -qpl package.rpm  # List all files contained inside an uninstalled package
+rpm -qpi package.rpm  # Show metadata, author, and description of the file
+```
+
+- Database Maintenance: Fix a corrupted RPM database if package installations freeze.
+
+```
+sudo rm -f /var/lib/rpm/__db*  # Remove stale lock files
+sudo rpm --rebuilddb           # Rebuild the package index database
+```

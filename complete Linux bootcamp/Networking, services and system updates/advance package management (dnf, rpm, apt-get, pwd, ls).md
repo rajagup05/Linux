@@ -75,3 +75,19 @@ sudo apt-get purge nginx      # Deletes the application AND its config files
 sudo apt-get autoremove --purge  # Cleans up orphaned dependencies and their configs
 ```
 
+### 📂 4. Advanced Filesystem Auditing (pwd, ls)
+
+When working with local repositories, pwd (Print Working Directory) and ls (List) help track package paths, permissions, and links.
+
+- Tracking Absolute Paths: Use pwd -P to resolve the actual physical path if you are working inside a symbolic link directory.
+
+```
+cd /var/www/html/repos/local-repo
+pwd -P  # Displays the physical path, bypassing symlinks
+```
+
+- Security and Size Auditing: View hidden attributes, file sizes, and modification times inside repository folders.
+
+```
+ls -lahv /var/www/html/repos/local-repo/
+```

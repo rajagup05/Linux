@@ -8,3 +8,9 @@ Rolling back patches and upgrades in Linux depends completely on your package ma
 - View update history: `sudo dnf history list`
 - Undo a specific update: `sudo dnf history undo 15`
 - Roll back to a specific point: `sudo dnf history rollback`
+
+### 2. Ubuntu & Debian (APT)
+
+- Find what changed: `less /var/log/apt/history.log`
+- Downgrade a specific package: `sudo apt install package_name=version_number`
+- Hold the package: `sudo apt-mark hold package_name`

@@ -7,3 +7,8 @@ In Linux, the Domain Name System (DNS) translates human-readable domain names in
 - `/etc/resolv.conf`: Lists active resolver name servers (e.g., nameserver 8.8.8.8) used by the system.
 - `/etc/nsswitch.conf`: Sets the decision order for lookups between local files and network DNS.
 - `/etc/systemd/resolved.conf`: Manages network name resolution behavior on modern systemd-based distros.
+
+- `dig domain.com`: Performs detailed DNS lookups and troubleshooting diagnostics.
+- `nslookup domain.com`: Queries name server mappings interactively or directly.
+- `host domain.com`: Provides a quick, simple IP lookup for a host.
+- `systemctl restart systemd-resolved`: Restarts the local resolver service after configuration updates.

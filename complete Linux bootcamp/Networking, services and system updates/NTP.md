@@ -49,3 +49,11 @@ server 0.pool.ntp.org iburst
 server 1.pool.ntp.org iburst
 ```
 
+- Key Command to Check Peers: `ntpq -p`
+
+
+### 5. Troubleshooting & Firewall
+
+- Port Requirements: NTP operates over UDP port 123. If you are setting up an NTP server or syncing across a strict network, ensure this port is open.
+- Conflicts: Do not run `ntpd` and `chronyd` simultaneously, as they will fight over control of the system clock.
+

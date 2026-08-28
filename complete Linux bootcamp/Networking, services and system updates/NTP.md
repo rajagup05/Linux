@@ -32,3 +32,20 @@ sudo dnf install chrony        # RHEL / Rocky Linux / Fedora
 
 ### 4. Configuring Classic NTP (ntpd)
 
+If your environment specifically requires the classic ntpd client/server:
+
+- Installation:
+
+```
+sudo apt install ntp          # Debian / Ubuntu
+sudo yum install ntp          # Older RHEL / CentOS
+```
+
+- Configuration File: `/etc/ntp.conf`
+- Inside this file, you define upstream servers using the NTP Pool Project:
+
+```
+server 0.pool.ntp.org iburst
+server 1.pool.ntp.org iburst
+```
+

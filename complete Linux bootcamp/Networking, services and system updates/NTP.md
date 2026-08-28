@@ -17,3 +17,18 @@ Regardless of which daemon runs in the background, you can use the unified timed
 
 
 ### 3. Configuring Chrony (Modern Standard)
+
+If you are running a modern distribution, Chrony is the recommended choice.
+
+- Installation:
+
+```
+sudo apt install chrony        # Debian / Ubuntu
+sudo dnf install chrony        # RHEL / Rocky Linux / Fedora
+```
+
+- Configuration File: `/etc/chrony.conf` (or `/etc/chrony/chrony.conf`)
+- Key Command to Check Peers: `chronyc sources -v`
+
+### 4. Configuring Classic NTP (ntpd)
+

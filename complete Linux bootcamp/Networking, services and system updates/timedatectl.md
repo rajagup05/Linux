@@ -29,3 +29,15 @@ To manually modify the clock, you must first disable automatic network time sync
 
 To let your system automatically keep the clock accurate using remote network time servers, turn NTP synchronization back on:
 
+`sudo timedatectl set-ntp true`
+
+To view detailed synchronization diagnostics (like the active server name and poll intervals) for systemd-timesyncd, use:
+
+`timedatectl timesync-status`
+
+### 5. Configure the Hardware Clock (RTC)
+
+The hardware clock built into your motherboard can store time in either Coordinated Universal Time (UTC) or Local Time. Maintaining the RTC in UTC is highly recommended for Linux servers and standalone systems to avoid Daylight Saving Time bugs.
+
+- Set the hardware clock to UTC (Recommended): `sudo timedatectl set-local-rtc 0`
+- Set the hardware clock to Local Time: `sudo timedatectl set-local-rtc 1`

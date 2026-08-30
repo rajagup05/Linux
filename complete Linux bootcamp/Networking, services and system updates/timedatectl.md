@@ -16,3 +16,16 @@ To permanently change the system-wide time zone, you first need to find the corr
 - Set the time zone: `sudo timedatectl set-timezone Region/City` (Example: `sudo timedatectl set-timezone America/New_York`)
 
 ### 3. Change Date and Time Manually
+
+To manually modify the clock, you must first disable automatic network time synchronization (NTP), or the command will fail.
+
+- Turn off NTP synchronization: `sudo timedatectl set-ntp false`
+- Set both date and time: `sudo timedatectl set-time "YYYY-MM-DD HH:MM:SS"`. Example: `sudo timedatectl set-time "2026-08-29 20:15:00"`
+- Set date only (leaves current time intact): `sudo timedatectl set-time "YYYY-MM-DD"`
+- Set time only (leaves current date intact): `sudo timedatectl set-time "HH:MM:SS"`
+
+
+### 4. Enable Automatic NTP Synchronization
+
+To let your system automatically keep the clock accurate using remote network time servers, turn NTP synchronization back on:
+

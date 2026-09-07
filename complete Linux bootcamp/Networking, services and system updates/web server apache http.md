@@ -50,3 +50,12 @@ Linux utilizes systemctl to control the background service:
     Enable on Boot          sudo systemctl enable apache2       sudo systemctl enable httpd
     Check Status            sudo systemctl status apache2       sudo systemctl status httpd
 
+### File Locations
+
+- Default Web Root (Where your HTML files live): `/var/www/html/` (The primary landing file is index.html).
+- Main Configuration Files:
+    - Ubuntu/Debian: `/etc/apache2/apache2.conf`
+    - RHEL/Fedora: `/etc/httpd/conf/httpd.conf`
+- Virtual Hosts (Hosting multiple websites on one server):
+    - Ubuntu/Debian: `/etc/apache2/sites-available/`
+    - RHEL/Fedora: `/etc/httpd/conf.d/`

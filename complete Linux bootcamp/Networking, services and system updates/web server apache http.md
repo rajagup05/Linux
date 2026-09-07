@@ -38,3 +38,15 @@ sudo firewall-cmd --permanent --add-service=https
 sudo firewall-cmd --reload
 ```
 
+### Management commands
+
+Linux utilizes systemctl to control the background service:
+
+    Action                    Ubuntu / Debian Command          RHEL / Fedora / Rocky Command
+    
+    start server            sudo systemctl start apache2        sudo systemctl start httpd
+    Stop Server             sudo systemctl stop apache2         sudo systemctl stop httpd
+    Restart Server          sudo systemctl restart apache2      sudo systemctl restart httpd
+    Enable on Boot          sudo systemctl enable apache2       sudo systemctl enable httpd
+    Check Status            sudo systemctl status apache2       sudo systemctl status httpd
+

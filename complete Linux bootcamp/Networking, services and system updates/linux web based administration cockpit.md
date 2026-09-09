@@ -11,3 +11,22 @@ Unlike older web panels, Cockpit uses zero background resources when you are not
 - 📦 Container & VM Management: Easily spin up, stop, and manage Podman/Docker containers and QEMU/KVM virtual machines using modular extensions.
 - 💻 Built-in Web Terminal: Access a fully functional root terminal directly inside your browser, eliminating the need for an external SSH client.
 - 🖥️ Multi-Server Control: Connect and jump between multiple Linux nodes via SSH, managing them all from a single centralized dashboard. 
+
+### setup
+
+Cockpit comes pre-installed on many modern enterprise distributions like Red Hat Enterprise Linux and Oracle Linux. If it isn't present, you can install and activate it using the default package manager: 
+
+#### 1. Install Cockpit
+
+For Ubuntu / Debian:
+
+```
+sudo apt update
+sudo apt install cockpit
+```
+
+For RHEL / Rocky Linux / AlmaLinux / Fedora:
+
+```
+sudo dnf install cockpit
+```

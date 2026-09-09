@@ -30,3 +30,16 @@ For RHEL / Rocky Linux / AlmaLinux / Fedora:
 ```
 sudo dnf install cockpit
 ```
+
+#### 2. Start and Enable the Socket
+
+Cockpit uses a systemd socket to listen for incoming web requests, meaning it only spins up the full service when you actively browse to it. 
+
+```
+sudo systemctl enable --now cockpit.socket
+```
+
+#### 3. Configure the Firewall (If Required)
+
+If you are running a firewall, allow Cockpit traffic (which defaults to port 9090). 
+

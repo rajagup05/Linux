@@ -1,0 +1,2 @@
+
+## central logger rsyslog

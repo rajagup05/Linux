@@ -43,3 +43,19 @@ sudo systemctl enable --now cockpit.socket
 
 If you are running a firewall, allow Cockpit traffic (which defaults to port 9090). 
 
+For firewalld (RHEL/Rocky):
+
+```
+sudo firewall-cmd --add-service=cockpit --permanent
+sudo firewall-cmd --reload
+```
+
+For ufw (Ubuntu/Debian):
+
+```
+sudo ufw allow 9090/tcp
+```
+
+#### 4. Access the Dashboard
+
+Open your web browser and navigate to: `https://<YOUR-SERVER-IP>:9090`

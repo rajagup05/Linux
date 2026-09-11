@@ -19,3 +19,13 @@ input(type="imudp" port="514")
 module(load="imtcp")
 input(type="imtcp" port="514")
 ```
+
+- Define a Dynamic Directory Template (Optional but Recommended): By default, the server mixes remote logs into its own /var/log files. To isolate incoming logs by the host that sent them, append a dynamic template rule at the bottom of /etc/rsyslog.conf:
+
+```
+$template RemoteLogs,"/var/log/remote/%HOSTNAME%/%PROGRAMNAME%.log"
+*.* ?RemoteLogs
+& stop
+```
+- Save the file and restart the service: `sudo systemctl restart rsyslog`
+- Verify the server is listening: `sudo ss -tulnp | grep 514`

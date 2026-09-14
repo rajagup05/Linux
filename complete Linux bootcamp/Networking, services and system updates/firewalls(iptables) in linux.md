@@ -49,3 +49,34 @@ sudo iptables -P OUTPUT ACCEPT
 ```
 
 - Allowing Vital Infrastructure (Loopback & State Tracking):
+
+Without allowing loopback interface (lo) and established traffic, internal server processes and internet-bound requests will break: 
+
+```
+# Allow local loopback traffic
+sudo iptables -A INPUT -i lo -j ACCEPT
+
+# Allow responses from connections you initiated (Stateful Inspection)
+sudo iptables -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
+```
+
+- Exposing Specific Services:
+
+```
+# Allow SSH (Port 22) from any IP
+sudo iptables -A INPUT -p tcp --dport 22 -j ACCEPT
+
+# Allow Web Traffic (HTTP Port 80 & HTTPS Port 443)
+sudo iptables -A INPUT -p tcp --dport 80 -j ACCEPT
+sudo iptables -A INPUT -p tcp --dport 443 -j ACCEPT
+```
+
+- Network Address Translation (NAT) & Port Forwarding:
+
+```
+# Forward incoming web traffic on port 80 to an internal server at 192.168.1.50
+sudo iptables -t nat -A PREROUTING -p tcp --dport 80 -j DNAT --to-destination 192.168.1.50:80
+
+# Mask traffic leaving an internal network to share a single public IP
+sudo iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+```

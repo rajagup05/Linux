@@ -16,3 +16,13 @@ Tables categorize rules based on the type of decision being made on a network pa
 - `mangle`: Used for specialized packet alteration, such as modifying TTL (Time to Live) fields or changing TOS (Type of Service) headers.
 - `raw`: Primarily used to configure exemptions from connection tracking (state tracking).
 - `security`: Used for Mandatory Access Control (MAC) networking rules (typically integrated with SELinux). 
+
+#### Chains (The "When")
+
+Chains match the point of arrival or departure of a packet in the network stack: 
+
+- `INPUT`: Processes packets destined for the local system.
+- `OUTPUT`: Processes packets generated locally that are leaving the system.
+- `FORWARD`: Processes packets routed through the system to another destination (e.g., if the machine acts as a router).
+- `PREROUTING`: Alters packets as soon as they arrive on a network interface, before any routing decisions are made.
+- `POSTROUTING`: Alters packets right before they leave a network interface. 

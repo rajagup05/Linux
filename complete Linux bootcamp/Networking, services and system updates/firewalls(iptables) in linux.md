@@ -26,3 +26,12 @@ Chains match the point of arrival or departure of a packet in the network stack:
 - `FORWARD`: Processes packets routed through the system to another destination (e.g., if the machine acts as a router).
 - `PREROUTING`: Alters packets as soon as they arrive on a network interface, before any routing decisions are made.
 - `POSTROUTING`: Alters packets right before they leave a network interface. 
+
+#### Targets (The "What")
+
+When a packet matches a rule, it triggers a designated action called a target: 
+
+- `ACCEPT`: Allows the packet to pass through.
+- `DROP`: Silently blocks the packet; the sender receives no response.
+- `REJECT`: Blocks the packet and explicitly sends an error packet back to the source.
+- `LOG`: Records the packet details to system logs (syslog) for auditing without altering its flow. 

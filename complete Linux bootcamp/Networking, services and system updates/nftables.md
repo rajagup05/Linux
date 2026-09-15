@@ -7,3 +7,10 @@ Managed via the user-space command-line tool nft, it interacts directly with the
 
 ### Why nftables Replaced iptables
 
+For over a decade, iptables was the standard Linux firewall. However, its architecture had fundamental limitations that nftables was designed to solve: 
+
+- **Unified Framework**: Instead of using separate utilities for different protocols (iptables for IPv4, ip6tables for IPv6, arptables, and ebtables), nftables replaces them all with a single tool (nft).
+- **The inet Dual-Stack Family**: You can write a single rule that filters both IPv4 and IPv6 traffic simultaneously using the inet family.
+- **No Predefined Chains**: Unlike iptables, which creates default chains (INPUT, OUTPUT, FORWARD) even if you don't use them, nftables starts completely empty. This eliminates unnecessary kernel overhead for unused paths.
+- **Atomic Transactions**: You can update or replace entire complex rule sets in-place as a single atomic operation. Your firewall configuration changes instantly without risking packet leaks or requiring full restarts.
+- **Cleaner Syntax**: The syntax is more concise and reads similarly to tcpdump or OpenBSD's pf. 

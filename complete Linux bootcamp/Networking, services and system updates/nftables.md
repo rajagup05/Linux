@@ -35,7 +35,7 @@ nft add table inet filter
 nft add chain inet filter input { type filter hook input priority 0 \; policy accept \; }
 ```
 
--  Add Rules
+-  Add Rules:
 
 ```
 # Allow incoming SSH (port 22) and HTTP/HTTPS traffic
@@ -45,3 +45,20 @@ nft add rule inet filter input tcp dport { 80, 443 } accept
 # Drop everything else (if changing policy to drop)
 nft add rule inet filter input drop
 ```
+
+- Manage the Ruleset:
+
+```
+# List the current ruleset with line handles (useful for deleting)
+nft list ruleset -a
+
+# Delete a specific rule using its handle ID (e.g., handle 4)
+nft delete rule inet filter input handle 4
+
+# Flush (clear) all current rules
+nft flush ruleset
+```
+
+### Configuration Files
+
+- In most distributions like Debian, Ubuntu, or RHEL, your permanent configuration file is located at /etc/nftables.conf. You can save your active rules directly into it to persist across reboots: `nft list ruleset > /etc/nftables.conf`

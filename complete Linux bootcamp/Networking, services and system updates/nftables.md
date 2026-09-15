@@ -22,3 +22,26 @@ nftables organizes rules into a strict hierarchy: **Tables ➔ Chains ➔ Rules*
   - Base chains hook directly into Linux kernel network flows (like input, forward, or output).
   - Regular chains act as custom subroutines you can jump into from a base chain.
 - **Rules**: The specific expressions that match packets and trigger actions (e.g., accept, drop, reject). 
+
+### Examples
+
+-  Create a Table and a Base Chain:
+
+```
+# Create an 'inet' table named 'filter'
+nft add table inet filter
+
+# Create an 'input' chain that hooks into the incoming packet stream
+nft add chain inet filter input { type filter hook input priority 0 \; policy accept \; }
+```
+
+-  Add Rules
+
+```
+# Allow incoming SSH (port 22) and HTTP/HTTPS traffic
+nft add rule inet filter input tcp dport 22 accept
+nft add rule inet filter input tcp dport { 80, 443 } accept
+
+# Drop everything else (if changing policy to drop)
+nft add rule inet filter input drop
+```

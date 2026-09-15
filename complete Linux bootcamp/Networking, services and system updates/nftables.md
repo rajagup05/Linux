@@ -14,3 +14,11 @@ For over a decade, iptables was the standard Linux firewall. However, its archit
 - **No Predefined Chains**: Unlike iptables, which creates default chains (INPUT, OUTPUT, FORWARD) even if you don't use them, nftables starts completely empty. This eliminates unnecessary kernel overhead for unused paths.
 - **Atomic Transactions**: You can update or replace entire complex rule sets in-place as a single atomic operation. Your firewall configuration changes instantly without risking packet leaks or requiring full restarts.
 - **Cleaner Syntax**: The syntax is more concise and reads similarly to tcpdump or OpenBSD's pf. 
+
+nftables organizes rules into a strict hierarchy: **Tables ➔ Chains ➔ Rules**.
+
+- **Tables**: Containers for chains. Each table must target a specific networking family (e.g., ip, ip6, inet, arp, bridge).
+- **Chains**: Containers for rules.
+  - Base chains hook directly into Linux kernel network flows (like input, forward, or output).
+  - Regular chains act as custom subroutines you can jump into from a base chain.
+- **Rules**: The specific expressions that match packets and trigger actions (e.g., accept, drop, reject). 

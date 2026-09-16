@@ -21,3 +21,17 @@ The nice command launches a new program with a modified scheduling priority, dic
 - **Permissions**: Regular users can only increase the nice value (lower the priority, from 0 to 19). Only the root user can assign negative nice values (higher priority).
 - **Syntax**: `nice -n [niceness_value] [command]`
 - **Example**: Run a heavy backup job with a lower priority so it does not lag the system:`nice -n 10 tar czf backup.tar.gz /large-directory`
+
+### Renice Command
+
+The renice command changes the scheduling priority of an already running process using its Process ID (PID), user name, or group ID. 
+
+- **Syntax**: `renice [niceness_value] -p [PID]`
+- **Permissions**: Like nice, regular users can only make their own processes "nicer" (increase the value). Superuser (sudo) permissions are required to increase priority (negative values) or modify other users' processes.
+- **Example**: Lower the priority of a running process with PID 1234:`renice -n 5 -p 1234`
+- **Example**: Alter all processes belonging to a specific user:`sudo renice 10 -u username`
+
+You can view current nice (NI) values using system monitoring utilities: 
+
+- **Top/Htop**: Look at the `NI` column in real-time.
+- **PS Command**: Run `ps -o pid,nice,comm` to list process IDs, niceness, and command names.

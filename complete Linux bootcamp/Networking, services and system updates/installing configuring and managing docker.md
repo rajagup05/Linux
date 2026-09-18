@@ -33,3 +33,7 @@ sudo usermod -aG docker $USER
 newgrp docker
 ```
 
+### phase 3. Managing Containers and Images
+
+- **Images**: Download templates (`docker pull <image>`), list local images (`docker images`), or remove unused templates (`docker rmi <image_id>`).
+- **Containers**: Run a container (`docker run -d --name <name> -p <ports> <image>`), list active or all instances (`docker ps` / `docker ps -a`), and stop or remove containers (`docker stop` / `docker rm`).

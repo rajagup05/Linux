@@ -23,3 +23,10 @@ Configuration happens through the inventory file and secure shell keys.
 192.168.1.51
 ```
 
+- Generate SSH keys on the control node to allow password-free logins: `ssh-keygen`
+- Copy your public key to each managed node: `ssh-copy-id user@192.168.1.50`
+
+### Managing
+
+- Test connection to all managed nodes with a ping module: `ansible all -m ping`
+- Run ad-hoc commands or execute playbooks to update software, manage services, and deploy apps across your group.

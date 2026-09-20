@@ -19,3 +19,15 @@ Define which network interface the server will use to broadcast IP addresses by 
 ```
 sudo nano /etc/default/isc-dhcp-server
 ```
+
+Look for INTERFACESv4 and assign your network card name (for example, eth0 or enp0s3):
+
+`INTERFACESv4="enp0s3"`
+
+### 3. Edit the DHCP Configuration File
+
+Open the main configuration file to set up your IP address range, gateway, and DNS servers:
+
+`sudo nano /etc/dhcp/dhcpd.conf`
+
+Add or uncomment a subnet declaration matching your network layout:

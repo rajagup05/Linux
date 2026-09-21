@@ -31,3 +31,19 @@ Open the main configuration file to set up your IP address range, gateway, and D
 `sudo nano /etc/dhcp/dhcpd.conf`
 
 Add or uncomment a subnet declaration matching your network layout:
+
+```
+subnet 192.168.1.0 netmask 255.255.255.0 {
+  range 192.168.1.50 192.168.1.150;
+  option routers 192.168.1.1;
+  option domain-name-servers 8.8.8.8, 8.8.4.4;
+  default-lease-time 600;
+  max-lease-time 7200;
+}
+```
+
+### 4. Test, Start, and Enable the Service
+
+Verify that your configuration file has no syntax errors before launching: `sudo dhcpd -t -cf /etc/dhcp/dhcpd.conf`
+
+If the syntax test passes, start the service and enable it to run automatically on system boot: `sudo systemctl enable --now isc-dhcp-server`

@@ -41,3 +41,19 @@ Run these commands on all nodes to allow cluster communication through the syste
 sudo firewall-cmd --permanent --add-service=high-availability
 sudo firewall-cmd --reload
 ```
+
+- Start the Configuration Daemon: Enable and start the pcsd service, which manages cluster sync across nodes: `sudo systemctl enable --now pcsd`
+
+### Step 4: Authenticate and Create the Cluster
+
+During the installation, a default system user named hacluster is created.
+
+- Set a Password: Run this on all nodes and use the exact same password: `sudo passwd hacluster`
+- Authenticate the Nodes: Run this command from Node 1 only to establish a secure trust link between the systems: `sudo pcs host auth node1.example.com node2.example.com -u hacluster -p your_password`
+- Generate and Start the Cluster: Run this on Node 1 only to build the configuration file (corosync.conf) and start the cluster services globally:
+
+```
+sudo pcs cluster setup my_cluster node1.example.com node2.example.com
+sudo pcs cluster start --all
+sudo pcs cluster enable --all
+```

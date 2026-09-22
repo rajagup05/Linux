@@ -57,3 +57,11 @@ sudo pcs cluster setup my_cluster node1.example.com node2.example.com
 sudo pcs cluster start --all
 sudo pcs cluster enable --all
 ```
+
+### Step 5: Verify the Cluster Health
+
+- Check if your nodes are properly communicating and online: `sudo pcs status`
+
+### Step 6: Post-Configuration (Crucial for Production)
+
+- By default, Pacemaker requires a fencing mechanism (STONITH) to physically isolate failing nodes and protect shared data. If you are testing in a lab/development environment without a fencing device, you must temporarily disable STONITH to make the cluster functional: `sudo pcs property set stonith-enabled=false`

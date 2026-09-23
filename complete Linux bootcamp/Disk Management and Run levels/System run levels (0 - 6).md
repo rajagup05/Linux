@@ -7,3 +7,7 @@ In Linux, a runlevel is a preset operating state that determines which system se
 
 - `1` (Single-User Mode): Used for maintenance and troubleshooting. No network services are started, and only the root user can log in.
 - `2` (Multi-User Mode (No NFS)): Multi-user mode without network file sharing (NFS). On Debian/Ubuntu systems, this is often identical to runlevel 5.
+
+- `3` (Multi-User Mode (CLI)): Full multi-user command-line interface (text mode) with networking. Standard operating state for most Linux servers.
+- `4` (User-Defined / Custom): Generally unused and customizable for specific administrative needs.
+- `5` (Multi-User Mode (GUI)): Identical to runlevel 3, but automatically loads a display manager for a graphical user interface (GUI). Standard for desktop systems.

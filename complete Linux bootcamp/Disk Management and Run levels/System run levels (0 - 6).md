@@ -11,3 +11,12 @@ In Linux, a runlevel is a preset operating state that determines which system se
 - `3` (Multi-User Mode (CLI)): Full multi-user command-line interface (text mode) with networking. Standard operating state for most Linux servers.
 - `4` (User-Defined / Custom): Generally unused and customizable for specific administrative needs.
 - `5` (Multi-User Mode (GUI)): Identical to runlevel 3, but automatically loads a display manager for a graphical user interface (GUI). Standard for desktop systems.
+
+- `6` (Reboot): Reboots the computer. Never set this as your default.
+
+### Commands
+
+#### Checking your current state:
+
+- Traditional: `runlevel`
+- Modern systemd: `systemctl get-default`

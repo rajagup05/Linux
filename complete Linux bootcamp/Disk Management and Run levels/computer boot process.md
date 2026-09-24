@@ -14,4 +14,13 @@ The Linux booting process moves through five main stages from the moment you tur
 - The Grand Unified Bootloader (GRUB) starts up and usually shows a menu letting you choose which operating system or kernel to launch.
 - GRUB loads the compressed Linux kernel and the temporary root file system (initramfs) straight into the computer's memory (RAM).
 
+### 3. Kernel Initialization
 
+- The kernel decompresses itself and takes full control of the computer's hardware and memory.
+- It runs the temporary file system (initramfs) to find, load, and initialize necessary device drivers and hardware modules.
+- The kernel mounts the real local root file system.
+
+### 4. Init System (systemd)
+
+- The kernel starts the very first user-space program, traditionally called init, which has a Process ID (PID) of 1.
+- 

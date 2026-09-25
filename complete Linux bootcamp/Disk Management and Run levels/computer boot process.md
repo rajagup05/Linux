@@ -23,4 +23,10 @@ The Linux booting process moves through five main stages from the moment you tur
 ### 4. Init System (systemd)
 
 - The kernel starts the very first user-space program, traditionally called init, which has a Process ID (PID) of 1.
-- 
+- Modern Linux distributions use systemd instead of older init systems.
+- systemd reads configuration targets, mounts remaining storage discs, starts background services, sets up networking, and runs necessary startup scripts.
+
+### 5. User Login
+
+- Once all system services finish loading, systemd launches the display manager for a graphical interface or a TTY prompt for a command-line interface.
+- The system displays the final login screen, and the computer is ready for use.

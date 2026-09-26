@@ -22,3 +22,8 @@ The Linux booting process is a sequential 5-stage startup sequence that transiti
 
 - Hardware Initialization: The Linux kernel decompresses itself, examines the system hardware, and loads necessary device drivers.
 - Mounting the Root File System: It mounts a temporary root file system (initramfs) to load essential drivers, then switches over to the real physical root file system.
+
+### 5. Init / Systemd (Initialization Stage)
+
+- Process ID 1: The kernel launches the first user-space program (systemd) with a Process ID (PID) of 1.
+- Target States: systemd reads target configurations to launch background services, network settings, and finally the login prompt or graphical desktop manager.

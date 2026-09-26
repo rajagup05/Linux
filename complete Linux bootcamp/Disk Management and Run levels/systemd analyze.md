@@ -34,3 +34,15 @@ You can also pinpoint a specific service to see what it is waiting on:
 You can export the entire boot timeline into an SVG graphic. This creates a visual breakdown of when every single service started and stopped initializing.
 
 `systemd-analyze plot > boot_chart.svg`
+
+#### 5. Verify Unit File Syntax (verify)
+
+Before restarting or enabling a custom systemd service, you can scan it for configuration errors or typos without loading it into the manager.
+
+`systemd-analyze verify /etc/systemd/system/my-app.service`
+
+#### 6. Analyze Service Security Posture (security)
+
+This subcommand assigns a security score (0.0 to 10.0) to a service based on its sandbox settings, helping you see where you can harden access.
+
+`systemd-analyze security nginx.service`

@@ -10,3 +10,13 @@ The Linux Message of the Day (MOTD) is a text notice or system status report dis
 
 ### How to Change Static MOTD
 
+Open or create the file with root privileges:
+
+`sudo nano /etc/motd`
+
+### How to Manage Dynamic MOTD (Ubuntu/Debian)
+
+- Add a custom section: Create an executable script in /etc/update-motd.d/ (for example, 99-custom).
+- Disable specific parts: Remove the executable permission from unwanted scripts in that folder:
+
+`sudo chmod -x /etc/update-motd.d/50-motd-news`

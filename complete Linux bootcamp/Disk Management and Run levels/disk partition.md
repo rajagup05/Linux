@@ -11,3 +11,14 @@ The df command tells you how much space is left on your currently active, mounte
 - View space along with the specific filesystem type (like ext4 or xfs): `df -Th`
 - Check space on a specific folder or mount point: `df -h /`
 
+### 2. The fdisk Command: Managing Partitions
+
+The fdisk command looks directly at the hardware blocks and partition maps. It allows you to split a single physical drive (like /dev/sda) into multiple independent logical sections (like /dev/sda1, /dev/sda2).
+
+#### Safe Mode: Listing Partitions
+
+- To inspect your hardware and layout without modifying anything, use the -l flag. `sudo fdisk -l`
+
+#### Modifying Mode: Interactive Partitioning
+
+- Running fdisk on a raw block device without the -l flag launches an interactive menu. `sudo fdisk /dev/sdb`

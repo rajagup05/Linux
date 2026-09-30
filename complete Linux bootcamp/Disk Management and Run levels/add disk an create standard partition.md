@@ -34,4 +34,4 @@ If you reboot your system right now, the disk will unmount. To ensure it mounts 
 - Find the UUID (Unique ID) of your new partition: `sudo blkid /dev/sdb1`
 - Open the configuration file in a text editor: `sudo nano /etc/fstab`
 - Add the following new line at the bottom of the file (replace the example UUID with yours): `UUID=your-uuid-here  /mnt/mydata  ext4  defaults  0  2`
-- 1. Save and exit (In Nano: Press `Ctrl+O`, `Enter`, then `Ctrl+X`).
+- Save and exit (In Nano: Press `Ctrl+O`, `Enter`, then `Ctrl+X`).

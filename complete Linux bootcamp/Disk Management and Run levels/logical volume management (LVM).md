@@ -29,3 +29,19 @@ LVM operates using three primary abstractions built on top of physical hardware:
 
 LVM slices Physical Volumes into uniform chunks called Physical Extents (PE) (typically 4 MB by default). When you create or expand a Logical Volume, LVM allocates a collection of these PEs to it. Because these extents can be mapped from anywhere inside the Volume Group, a Logical Volume does not need to be contiguous and can safely span across entirely different physical hard drives.
 
+### Key Advantages of LVM
+
+- **Dynamic Resizing**: You can expand a logical volume and its filesystem online (while mounted and running) without any system downtime.
+- **Span Multiple Disks**: You can combine small physical disks to form a single, massive logical drive.
+- **Live Data Migration**: If a hard drive starts failing, you can use the pvmove command to move data off that specific physical disk onto a new one while the system remains fully online and active.
+- **Snapshots**: You can capture a point-in-time "frozen" copy of your volume. This is incredibly useful for taking safe backups or testing risky configurations, with the ability to easily roll back or merge changes later.
+- **Advanced Features**: LVM natively supports software RAID configurations, data striping for speed, thin provisioning (overselling storage space), and SSD caching to accelerate slower HDDs.
+
+### LVM Workflow
+
+The standard workflow to provision storage with LVM involves initializing the hardware, pooling it, and creating the usable volume:
+
+#### 1. Manage Physical Volumes
+
+- Initialize a disk/partition for LVM: `sudo pvcreate /dev/sdb`
+- View status of physical volumes: `sudo pvdisplay` or `sudo pvs`

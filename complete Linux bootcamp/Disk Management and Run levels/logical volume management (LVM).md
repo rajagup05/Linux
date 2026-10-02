@@ -45,3 +45,19 @@ The standard workflow to provision storage with LVM involves initializing the ha
 
 - Initialize a disk/partition for LVM: `sudo pvcreate /dev/sdb`
 - View status of physical volumes: `sudo pvdisplay` or `sudo pvs`
+
+#### 2. Manage Volume Groups
+
+- Create a new volume group: `sudo vgcreate my_storage_pool /dev/sdb /dev/sdc`
+- Add a new physical disk to an existing pool: `sudo vgextend my_storage_pool /dev/sdd`
+- View volume group info: `sudo vgdisplay` or `sudo vgs`
+
+#### 3. Manage Logical Volumes
+
+- Create a 50 GB logical volume: `sudo lvcreate -L 50G -n my_documents_lv my_storage_pool`
+- Create a volume using all remaining free pool space: `sudo lvcreate -l 100%FREE -n my_documents_lv my_storage_pool`
+- Format the volume with a file system: `sudo mkfs.ext4 /dev/my_storage_pool/my_documents_lv`
+
+
+
+

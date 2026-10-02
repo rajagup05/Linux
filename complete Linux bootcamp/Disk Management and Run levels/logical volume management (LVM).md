@@ -58,6 +58,11 @@ The standard workflow to provision storage with LVM involves initializing the ha
 - Create a volume using all remaining free pool space: `sudo lvcreate -l 100%FREE -n my_documents_lv my_storage_pool`
 - Format the volume with a file system: `sudo mkfs.ext4 /dev/my_storage_pool/my_documents_lv`
 
+#### 4. Resizing Storage (The Ultimate LVM Benefit)
+
+If your logical volume runs out of space, you can seamlessly extend it. For ext4 filesystems, you can increase the volume size and scale the underlying filesystem in a single step using the -r option:
+
+`sudo lvextend -r -L +20G /dev/my_storage_pool/my_documents_lv`
 
 
 

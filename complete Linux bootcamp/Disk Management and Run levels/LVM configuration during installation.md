@@ -1,0 +1,2 @@
+
+## LVM configuration during installation

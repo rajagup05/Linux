@@ -28,3 +28,15 @@ Allocate storage from your Volume Group to create a Logical Volume (LV). Replace
 #### Option A: Allocate by specific size (e.g., 20 Gigabytes):
 
 `sudo lvcreate -L 20G -n my_lv my_vg`
+
+#### Option B: Allocate 100% of the remaining free space in the VG:
+
+`sudo lvcreate -l 100%FREE -n my_lv my_vg`
+
+### Step 5: Format and Mount the Volume
+
+To make the new storage usable, format it with a filesystem and attach it to your directory tree.
+
+- Format with a filesystem (such as Ext4 or XFS): `sudo mkfs.ext4 /dev/my_vg/my_lv`
+- Create a mount point directory: `sudo mkdir -p /mnt/my_storage`
+- Mount the volume manually: `sudo mount /dev/my_vg/my_lv /mnt/my_storage`

@@ -14,3 +14,17 @@ Run the following command to find the name of your newly added raw disk (e.g., /
 Initialize the raw disk (or a partition) as an LVM Physical Volume (PV):
 
 `sudo pvcreate /dev/sdb`
+
+### Step 3: Create a Volume Group (vgcreate)
+
+Combine your physical volume into a new Volume Group (VG). Replace my_vg with your preferred group name:
+
+`sudo vgcreate my_vg /dev/sdb`
+
+### Step 4: Create a Logical Volume (lvcreate)
+
+Allocate storage from your Volume Group to create a Logical Volume (LV). Replace my_lv with your preferred volume name:
+
+#### Option A: Allocate by specific size (e.g., 20 Gigabytes):
+
+`sudo lvcreate -L 20G -n my_lv my_vg`

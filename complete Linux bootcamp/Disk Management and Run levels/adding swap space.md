@@ -20,3 +20,17 @@ Set up the file to serve as a Linux swap area: `sudo mkswap /swapfile`
 ### Step 5: Activate the swap file
 
 Tell the Linux kernel to start using your newly created file for virtual memory: `sudo swapon /swapfile`
+
+### Step 6: Make the swap permanent (Survivable through Reboots)
+
+By default, the swap file will turn off when you reboot the computer. To make it permanent, open the filesystem configuration file (/etc/fstab) in a text editor: `sudo nano /etc/fstab`
+
+Move to the bottom of the file and add the following line: `/swapfile none swap defaults 0 0`
+
+Save and exit the text editor (in Nano, press `Ctrl+O`, `Enter`, then `Ctrl+X`).
+
+### Step 7: Verify it works
+
+Run either of these commands to verify that your swap memory is active and has increased:
+
+`sudo swapon --show` or `free -h`

@@ -13,3 +13,26 @@ xfs_info [options] [mount-point | block-device | file-image]
 
 - `mount-point`: The directory path where the XFS filesystem is currently mounted (e.g., `/mnt/data`).
 - `block-device`: The raw partition file (e.g., `/dev/sdb1`).
+
+### Anatomy of `xfs_info` Output
+
+When you run xfs_info /mnt/data, you will receive a structured block of metadata text. Here is a breakdown of what the primary fields mean:
+
+    meta-data=/dev/sdb1              isize=512    agcount=4, agsize=262144 blks
+             =                       sectsz=512   attr=2, projid32bit=1
+             =                       crc=1        finobt=1, spinodes=0, rmapbt=0
+             =                       reflink=1, bigtime=1, inobtcount=1
+    data     =                       bsize=4096   blocks=1048576, imaxpct=25
+             =                       sunit=0      swidth=0 blks
+    naming   =version 2              bsize=4096   ascii-ci=0, ftype=1
+    log      =internal log           bsize=4096   blocks=2560, version=2
+             =                       sectsz=512   sunit=0 blks, lazy-count=1
+    realtime =none                   extsz=4096   blocks=0, rtextents=0
+
+
+#### 1. meta-data Section
+
+- `isize`: The size of an individual inode in bytes (typically 256 or 512).
+
+
+

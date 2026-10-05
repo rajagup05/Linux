@@ -45,6 +45,17 @@ When you run xfs_info /mnt/data, you will receive a structured block of metadata
 
 #### 3. naming Section
 
+- `bsize`: The block size reserved for directory structures.
+- `ftype`: When set to 1, directory entries store the file type natively, improving performance for tools like find.
+
+#### 4. log Section
+
+- `internal log` / `external log`: Shows whether the XFS journaling log is embedded inside the data partition or isolated on a separate, dedicated log device.
+- `blocks`: The size of the journaling log section, measured in blocks.
+
+#### 5. realtime Section
+
+- `none` / `blocks`: Shows details if the XFS realtime sub-volume feature is configured (typically used for deterministic, high-speed streaming workloads).
 
 
 

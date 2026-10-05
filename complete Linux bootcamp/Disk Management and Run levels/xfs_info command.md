@@ -33,6 +33,20 @@ When you run xfs_info /mnt/data, you will receive a structured block of metadata
 #### 1. meta-data Section
 
 - `isize`: The size of an individual inode in bytes (typically 256 or 512).
+- `agcount`: The number of Allocation Groups (AG). XFS divides filesystems into AGs to manage space and allow parallel indexing/allocation operations.
+- `agsize`: The size of each Allocation Group, measured in blocks.
+- `crc` & `reflink`: Feature bits. crc=1 indicates metadata checksums are enabled for corruption protection. reflink=1 indicates support for copy-on-write file clones.
+
+#### 2. data Section
+
+- `bsize`: The fundamental block size of the filesystem (usually 4096 bytes or 4KiB).
+- `blocks`: The total number of data blocks available in the entire filesystem.
+- • `sunit` / `swidth`: RAID stripe unit and width values. Ifconfigured during mkfs.xfs, these optimize data alignment across a hardware RAID array.
+
+#### 3. naming Section
+
+
+
 
 
 

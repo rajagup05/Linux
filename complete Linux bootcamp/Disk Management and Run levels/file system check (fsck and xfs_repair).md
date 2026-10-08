@@ -9,3 +9,10 @@ Before using either tool, always unmount the file system you intend to check. Ru
 
 `sudo umount /dev/sdXN`
 
+#### 1. fsck (File System Consistency Checker)
+
+fsck serves as a front-end wrapper. When executed, it identifies the target file system type and automatically dispatches the correct backend tool (such as e2fsck for Ext4). It verifies block bitmaps, inode tables, directory structures, and the superblock.
+
+- **Common Use Cases**: Fixing systems that fail to boot, resolving Input/output error prompts, or dealing with partitions that automatically flip to "Read-only" mode because the kernel detected metadata anomalies.
+- `fsck -n /dev/sdXN`: Performs a safe dry-run (read-only) check without making modifications.
+- `fsck -y /dev/sdXN`: Automatically answers "yes" to all repair prompts. Excellent for automated scripts or when facing hundreds of minor errors.

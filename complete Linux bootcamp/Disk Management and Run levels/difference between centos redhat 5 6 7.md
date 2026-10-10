@@ -9,4 +9,10 @@ The main differences between Red Hat Enterprise Linux (RHEL) and CentOS versions
 - **Service Management**: Relied heavily on the traditional SysVinit script structure located in /etc/init.d/, which booted services sequentially (slower startup times).
 - **File Systems**: Used ext3 as the standard journaling file system.
 
+### CentOS / RHEL 6
+
+- **Kernel & Architecture**: Upgraded to the 2.6.32 kernel with better hardware support, virtualization, and scalability. Still supported 32-bit and 64-bit systems.
+- **Service Management**: Introduced Upstart alongside legacy SysVinit scripts to handle parallel service initialization and event-driven startup.
+- **File Systems**: Transitioned to ext4 as the default file system, supporting single partitions up to 50 TB.
+- **Tooling**: Introduced utilities like yum history for tracking and rolling back package transactions.
 

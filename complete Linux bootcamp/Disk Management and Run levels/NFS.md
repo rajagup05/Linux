@@ -29,3 +29,26 @@ Apply the configuration and restart the server using instructions from Ubuntu Se
 sudo exportfs -a
 sudo systemctl restart nfs-kernel-server
 ```
+
+### Mounting the Share on a Client
+
+Install the client software:
+
+```
+sudo apt update
+sudo apt install nfs-common
+```
+
+Create a local mount point and mount the remote directory:
+
+```
+sudo mkdir -p /mnt/nfs/general
+sudo mount 192.168.1.50:/var/nfs/general /mnt/nfs/general
+```
+
+To make the mount permanent across reboots, add an entry to /etc/fstab:
+
+```
+192.168.1.50:/var/nfs/general /mnt/nfs/general nfs defaults 0 0
+```
+

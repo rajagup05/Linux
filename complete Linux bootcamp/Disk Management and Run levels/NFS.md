@@ -18,3 +18,14 @@ Create the directory you want to share:
 sudo mkdir -p /var/nfs/general
 sudo chown nobody:nogroup /var/nfs/general
 ```
+
+Export the directory by editing /etc/exports:
+
+`/var/nfs/general  192.168.1.0/24(rw,sync,no_root_squash)`
+
+Apply the configuration and restart the server using instructions from Ubuntu Server documentation:
+
+```
+sudo exportfs -a
+sudo systemctl restart nfs-kernel-server
+```

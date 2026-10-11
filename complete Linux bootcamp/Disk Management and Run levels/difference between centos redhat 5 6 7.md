@@ -16,3 +16,13 @@ The main differences between Red Hat Enterprise Linux (RHEL) and CentOS versions
 - **File Systems**: Transitioned to ext4 as the default file system, supporting single partitions up to 50 TB.
 - **Tooling**: Introduced utilities like yum history for tracking and rolling back package transactions.
 
+### CentOS / RHEL 7
+
+- **Kernel & Architecture**: Shifted to the 3.10 kernel and dropped 32-bit support entirely, running exclusively on 64-bit (x86_64) systems.
+- **Service Management**: Replaced SysVinit and Upstart with systemd, drastically cutting boot times (down to ~20 seconds) and changing service commands to systemctl (e.g., systemctl start servicename).
+- **File Systems**: Switched the default file system from ext4 to XFS, scaling partition sizes up to 500 TB.
+- **Networking & Firewalls**: Replaced legacy iptables with Firewalld and introduced NetworkManager as the default network configuration tool.
+- **Software Stack**: Updated baseline runtimes significantly (e.g., moving from older Apache/PHP/Python stacks to Apache 2.4 and newer toolchains).
+
+
+
